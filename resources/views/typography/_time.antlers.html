@@ -8,8 +8,6 @@
     @param class Add custom CSS classes.
 #}}
 
-<!-- /typography/_time.antlers.html -->
 <{{ as or 'time' }} class="{{ color or 'text-neutral' }} {{ class }}" lang="{{ site:short_locale }}">
     {{ content | iso_format(format or 'D MMMM YYYY') }}
 </{{ as or 'time' }}>
-<!-- End: /typography/_time.antlers.html -->

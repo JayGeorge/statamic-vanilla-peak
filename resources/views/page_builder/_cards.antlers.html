@@ -4,7 +4,6 @@
     @set page.page_builder.cards
 #}}
 
-<!-- /page_builder/_cards.antlers.html -->
 <section class="fluid-container grid md:grid-cols-12 gap-8">
     {{ block:title ?= { partial:typography/h2 :content="block:title" class="md:col-start-3 md:col-span-8 text-center" } }}
 
@@ -39,4 +38,3 @@
         </{{ button ? 'a' : 'article' }}>
     {{ /block:cards }}
 </section>
-<!-- End: /page_builder/_cards.antlers.html -->
