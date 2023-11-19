@@ -1,0 +1,29 @@
+/* GROUP LAYERS
+=================================================== */
+@layer
+base,
+elements,
+objects,
+components,
+modifiers,
+/* Third party e.g. https://plyr.io */
+vendors,
+/* Specific UI that should never be overridden, such as the layout in Alpine Components */
+ui,
+utilities,
+scope;
+
+/* GROUP CSS
+=================================================== */
+/* These import statements are run through postcss-import and concatenated in production environments. */
+@import 'base/base.css';
+@import 'base/elements.css';
+/* @import 'objects/objects.css'; */
+/* @import 'objects/something.css'; */
+/* @import 'components/something.css'; */
+/* @import 'scope/scope.css'; */
+@import 'utilities/utilities.css';
+
+* {
+    border: 1px solid red;
+}
