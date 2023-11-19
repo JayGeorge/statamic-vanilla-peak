@@ -1,3 +1,4 @@
+{{# /vendor/statamic/forms/fields/select.antlers.html #}}
 <select
     class="w-full rounded border-neutral focus-visible:border-primary focus-visible:ring focus-visible:ring-primary motion-safe:transition"
     :class="{ 'border-red-600 focus-visible:border-red-600': errors.{{ handle }} }"
@@ -21,3 +22,4 @@
         </option>
     {{ /foreach:options }}
 </select>
+{{# End: /vendor/statamic/forms/fields/select.antlers.html #}}

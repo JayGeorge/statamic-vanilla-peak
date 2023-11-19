@@ -4,6 +4,7 @@
     @set page.article.video
 #}}
 
+{{# /components/_video.antlers.html #}}
 {{ cookie_embeds =
     (environment == 'local' && seo:trackers_local && seo:embeds) or
     (environment == 'staging' && seo:trackers_staging && seo:embeds) or
@@ -43,3 +44,4 @@
 
     {{ partial:typography/caption }}
 </div>
+{{# End: /components/_video.antlers.html #}}
