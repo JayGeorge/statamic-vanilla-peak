@@ -26,6 +26,8 @@
     "postcss-import": "^15.1.0",
     "resolve-url-loader": "^5.0.0",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    // Vanilla CSS from =JFG.
+    "@csstools/postcss-nesting-experimental": "^2.0.0",
   }
 }
