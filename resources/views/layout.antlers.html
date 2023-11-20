@@ -13,13 +13,13 @@
         {{ vite src="resources/js/site.js" }}
         {{ partial:statamic-peak-seo::snippets/seo }}
         {{ partial:statamic-peak-browser-appearance::snippets/browser_appearance }}
-        {{ partial:statamic-peak-tools::snippets/live_preview }}
+        {{ partial:statamic-vanilla-peak-tools::snippets/live_preview }}
     </head>
     <body class="flex flex-col min-h-screen bg-white selection:bg-primary selection:text-white">
         {{ stack:seo_body }}
-        {{ partial:statamic-peak-tools::snippets/noscript }}
-        {{ partial:statamic-peak-tools::navigation/skip_to_content }}
-        {{ partial:statamic-peak-tools::components/toolbar }}
+        {{ partial:statamic-vanilla-peak-tools::snippets/noscript }}
+        {{ partial:statamic-vanilla-peak-tools::navigation/skip_to_content }}
+        {{ partial:statamic-vanilla-peak-tools::components/toolbar }}
 
         {{ partial:layout/header }}
         {{ template_content }}

@@ -6,7 +6,7 @@ import focus from '@alpinejs/focus'
 
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {
-    return await fetch('/!/statamic-peak-tools/dynamic-token/refresh')
+    return await fetch('/!/statamic-vanilla-peak-tools/dynamic-token/refresh')
         .then((res) => res.json())
         .then((data) => {
             return data.csrf_token
