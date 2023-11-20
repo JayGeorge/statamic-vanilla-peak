@@ -1,7 +1,7 @@
 module.exports = {
     plugins: {
         'postcss-import': {},
-        tailwindcss: {},
+        // tailwindcss: {},
         '@csstools/postcss-oklab-function': { 'preserve': true },
         autoprefixer: {},
         // Vanilla CSS from =JFG.

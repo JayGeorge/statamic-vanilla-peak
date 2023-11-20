@@ -6,10 +6,14 @@ export default defineConfig(({ command, mode }) => {
     return {
         plugins: [
             laravel({
-                refresh: true,
+                // refresh: true,
                 input: [
-                    'resources/css/site.css',
                     'resources/js/site.js',
+                    // Vanilla CSS from =JFG.
+                    'public/css/style.css',
+                    // 'public/css/something-else.css',
+                    // JS
+                    // 'public/js/something-else.js',
                 ]
             })
         ],

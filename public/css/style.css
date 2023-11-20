@@ -23,6 +23,7 @@ scope;
 /* @import 'components/something.css'; */
 /* @import 'scope/scope.css'; */
 @import 'utilities/utilities.css';
+/* @import 'vendors/plugins.css'; */
 
 * {
     border: 1px solid red;
