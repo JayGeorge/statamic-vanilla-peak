@@ -1,0 +1,20 @@
+/* GROUP PEAK STARTER
+=================================================== */
+/* Notes...
+
+    - This stylesheet simply replicates Peak's demo styles
+    - Feel free to delete this file when you're ready to write custom CSS
+
+*/
+@layer base {
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: white;
+    }
+}

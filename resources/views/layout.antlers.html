@@ -5,7 +5,7 @@
 
 {{# /layout.antlers.html #}}
 <!doctype html>
-<html lang="{{ site:short_locale }}" class="antialiased">
+<html lang="{{ site:short_locale }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
         {{ partial:statamic-peak-browser-appearance::snippets/browser_appearance }}
         {{ partial:statamic-vanilla-peak-tools::snippets/live_preview }}
     </head>
-    <body class="flex flex-col min-h-screen bg-white selection:bg-primary selection:text-white">
+    <body>
         {{ stack:seo_body }}
         {{ partial:statamic-vanilla-peak-tools::snippets/noscript }}
         {{ partial:statamic-vanilla-peak-tools::navigation/skip_to_content }}
