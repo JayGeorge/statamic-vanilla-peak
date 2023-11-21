@@ -24,7 +24,3 @@ scope;
 /* @import 'scope/scope.css'; */
 @import 'utilities/utilities.css';
 /* @import 'plugins/plugins.css'; */
-
-* {
-    border: 1px solid red;
-}

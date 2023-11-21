@@ -6,15 +6,102 @@
     - Feel free to delete this file when you're ready to write custom CSS
 
 */
+:root {
+    /* GROUP VARIABLES -- LAYOUT -- Z-INDEX
+    =================================================== */
+    --z-index-above-body: 1;
+    /* Original Peak Tailwind value of 50 */
+    --z-index-nav: 2;
+    --z-index-above-nav: 3;
+    /* GROUP VARIABLES -- DECORATION -- COLOURS -- THEME
+    =================================================== */
+    --color-peak-purple: oklch(53.24% .301 290.86);
+    /* GROUP VARIABLES -- DECORATION -- TEXT -- FONTS
+    =================================================== */
+    --font-family-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* GROUP VARIABLES -- DECORATION -- TEXT -- WEIGHTS
+    =================================================== */
+    --font-family-ui-weight-strong: 700;
+    /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES
+    =================================================== */
+    --font-size-s-x: 0.875rem;
+    --font-size-s-x-line-height: 1.25;
+    /* GROUP VARIABLES -- ANIMATIONS -- TIMING
+    =================================================== */
+    --animation-timing-function-fast-out-slow-in: cubic-bezier(.4,0,.2,1);
+    /* GROUP VARIABLES -- OTHER
+    =================================================== */
+    --ring-offset-width: 2px;
+    --ring-offset-color: var(--color-peak-purple);
+
+    cubic-bezier(.4,0,.2,1)
+}
 @layer base {
-    html {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
     body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         background: white;
+
+        font-family: var(--font-family-main);
+        /* https://app.typographychecklist.com/ - 23. Use standard ligatures but avoid using discretionary ligatures in body text */
+        font-feature-settings: "kern", "liga", "clig", "calt";
+        font-family: var(--font-family-main);
+        /* https://css-tricks.com/scrollbar-reflowing/ */
+        scrollbar-gutter: stable both-edges;
+    }
+}
+
+/* GROUP COMPONENTS / SKIP TO CONTENT
+=================================================== */
+/* Notes...
+
+    What does it do?
+    ----------------
+    "Skip to content" is a feature commonly found on websites designed to enhance accessibility. It's typically a hidden link placed at the top of a webpage that allows users who navigate via screen readers or keyboard shortcuts to bypass repetitive content (like navigation menus) and jump directly to the main content of the page. This helps users with disabilities or those who rely on assistive technologies to access and consume the essential information on a website more efficiently.
+
+*/
+/* HTML Example...
+
+    <a class="c-skip-to-content" href="#content">
+        Skip to content
+    </a>
+
+*/
+@layer components {
+    /* a*/
+    .c-skip-to-content {
+        position: fixed;
+        z-index: var(--z-index-above-nav);
+        top: 1rem;
+        left: 2rem;
+
+        padding: 0.5rem 1rem;
+
+        font-size: var(--font-size-s-x);
+        font-weight: var(--font-family-ui-weight-strong);
+        text-decoration: none;
+
+        background: var(--color-peak-purple);
+        color: white;
+
+        opacity: 0;
+
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+
+        /* If they're OK with animation */
+        @media (prefers-reduced-motion: no-preference) {
+            transform: translateY(-6rem);
+            transition-property: transform;
+            transition-timing-function: var(--animation-timing-function-fast-out-slow-in);
+            transition-duration: .3s;
+        }
+
+        &:focus {
+            transform: unset;
+            opacity: 1;
+            box-shadow: white 0px 0px 0px var(--ring-offset-width), var(--ring-offset-color) 0px 0px 0px 4px, transparent 0px 0px 0px 0px;
+        }
     }
 }

@@ -1,0 +1,10 @@
+{{ prepend:stylesheets }}style{{ /prepend:stylesheets }}
+{{ stack:stylesheets as="styles" }}
+    {{ styles | pluck ('value') | unique }}
+        {{ if environment == 'local' }}
+            <link rel="stylesheet" href="/css/{{ value }}.css">
+        {{ else }}
+            <link rel="stylesheet" href="{{ vite:asset src='public/css/{value}.css' }}">
+        {{ /if }}
+    {{ /styles }}
+{{ /stack:stylesheets }}
