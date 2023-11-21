@@ -29,6 +29,7 @@
     /* GROUP VARIABLES -- DECORATION -- COLOURS -- THEME
     =================================================== */
     --color-peak-purple: oklch(53.24% .301 290.86);
+    --color-focus: var(--color-peak-purple);
 
     /* GROUP VARIABLES -- DECORATION -- TEXT -- FONTS
     =================================================== */
@@ -49,10 +50,8 @@
 
     /* GROUP VARIABLES -- OTHER
     =================================================== */
-    --ring-offset-width: 2px;
-    --ring-offset-color: var(--color-peak-purple);
-
-    cubic-bezier(.4,0,.2,1)
+    --focus-offset-width: 4px;
+    --focus-width: 2px;
 }
 @layer base {
     body {
@@ -67,6 +66,19 @@
         font-family: var(--font-family-main);
         /* https://css-tricks.com/scrollbar-reflowing/ */
         scrollbar-gutter: stable both-edges;
+    }
+}
+
+
+
+/* GROUP ELEMENTS / FRAMEWORK / TEXT / LINK STYLES {/ LINKS} / ACCESSIBILITY / FOCUS
+=================================================== */
+@layer base {
+    :is(a, button, summary):focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+        outline: var(--focus-width) solid var(--color-focus);
     }
 }
 
@@ -104,11 +116,9 @@
 
         background: var(--color-peak-purple);
         color: white;
-        box-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color), var(--ring-shadow);
 
         opacity: 0;
 
-        outline: 2px solid transparent;
         outline-offset: 2px;
 
         /* If they're OK with animation */
@@ -120,7 +130,6 @@
         &:focus {
             transform: unset;
             opacity: 1;
-            box-shadow: white 0px 0px 0px var(--ring-offset-width), var(--ring-offset-color) 0px 0px 0px 4px, transparent 0px 0px 0px 0px;
         }
     }
 }
@@ -144,9 +153,5 @@
     transition: transform 0.3s var(--animation-timing-function-fast-out-slow-in);
     &:hover {
         transform: scale(1.25) rotate(2deg);
-    }
-    &:focus {
-        outline: none;
-        box-shadow: white 0px 0px 0px var(--ring-offset-width), var(--ring-offset-color) 0px 0px 0px 4px, transparent 0px 0px 0px 0px;
     }
 }
