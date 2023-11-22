@@ -4,23 +4,19 @@
 #}}
 
 {{# /navigation/_main_desktop.antlers.html #}}
-<nav class="hidden md:block" aria-label="{{ trans:strings.main_navigation }}">
-    <ul class="flex items-center space-x-8">
+<nav class="c-site-header__nav-desktop u-mq-768-up" aria-label="{{ trans:strings.main_navigation }}">
+    <ul>
         {{ nav:main max_depth="2" include_home="true" select="title|url" }}
             <li
                 {{ if children }}
                     x-data="{ subnavOpen: false }"
                     @keyup.escape.stop.prevent="subnavOpen = false"
-                    @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)"
+                    @focusin.window="$refs.subnav.contains($event.target) && (subnavOpen = false)"
                 {{ /if }}
-                class="relative leading-none"
             >
                 <a
                     class="
-                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
-                        {{ is_current || is_parent
-                            ? 'text-primary'
-                            : 'text-neutral' }}
+                        {{ is_current || is_parent ?= 'o-current-menu-item' }}
                     "
                     {{ if children }}
                         href="#"
@@ -35,8 +31,8 @@
                 >
                     {{ title }}
                     {{ if children }}
-                        <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform">
-                            {{ svg:chevron_down class="w-2 ml-1 overflow-visible stroke-current text-neutral" aria-hidden="true" sanitize="true" }}
+                        <div :class="subnavOpen ? 'o-subnav o-subnav--open' : 'o-subnav'">
+                            {{ svg:chevron_down aria-hidden="true" sanitize="true" }}
                         </div>
                     {{ /if }}
                 </a>
@@ -44,7 +40,6 @@
                     <ul
                         x-show="subnavOpen"
                         x-ref="subnav"
-                        class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
                         @click.outside="subnavOpen = false"
                         x-transition
                         x-cloak
@@ -52,12 +47,7 @@
                         {{ children }}
                             <li class="">
                                 <a
-                                    class="
-                                        whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
-                                        {{ is_current || is_parent
-                                            ? 'text-primary'
-                                            : 'text-neutral' }}
-                                    "
+                                    class="{{ is_current || is_parent ?= 'o-current-menu-item' }}"
                                     href="{{ url }}"
                                 >
                                     {{ title }}

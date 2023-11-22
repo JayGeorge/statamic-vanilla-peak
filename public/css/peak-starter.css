@@ -28,8 +28,11 @@
 
     /* GROUP VARIABLES -- DECORATION -- COLOURS -- THEME
     =================================================== */
-    --color-peak-purple: oklch(53.24% .301 290.86);
-    --color-focus: var(--color-peak-purple);
+    --colour-black-hsl: 217.24deg 32.58% 17.45%;
+
+    --color-primary-text: hsl(var(--colour-black-hsl));
+    --color-primary-accent: oklch(53.24% .301 290.86);
+    --color-focus: var(--color-primary-accent);
 
     /* GROUP VARIABLES -- DECORATION -- TEXT -- FONTS
     =================================================== */
@@ -48,10 +51,16 @@
     =================================================== */
     --animation-timing-function-fast-out-slow-in: cubic-bezier(.4,0,.2,1);
 
+    /* GROUP VARIABLES -- ANIMATIONS -- TRANSITIONS
+    =================================================== */
+    --transition-transform: transform 0.3s var(--animation-timing-function-fast-out-slow-in);
+
     /* GROUP VARIABLES -- OTHER
     =================================================== */
     --focus-offset-width: 4px;
     --focus-width: 2px;
+
+    --border-neutral: 1px solid hsl(var(--colour-black-hsl) / 10%);
 }
 @layer base {
     body {
@@ -59,6 +68,7 @@
         flex-direction: column;
         min-height: 100vh;
         background: white;
+        color: var(--color-primary-text);
 
         font-family: var(--font-family-main);
         /* https://app.typographychecklist.com/ - 23. Use standard ligatures but avoid using discretionary ligatures in body text */
@@ -71,7 +81,51 @@
 
 
 
-/* GROUP ELEMENTS / FRAMEWORK / TEXT / LINK STYLES {/ LINKS} / ACCESSIBILITY / FOCUS
+/* GROUP ELEMENTS
+=================================================== */
+@layer elements {
+    a {
+        text-decoration: inherit;
+    }
+    svg {
+        stroke: currentColor;
+    }
+}
+
+
+
+/* GROUP ELEMENTS / NAV
+=================================================== */
+@layer elements {
+    nav {
+        & a {
+            color: inherit;
+        }
+        & svg {
+            /* subnav arrow */
+            margin-inline-start: var(--spacing-s-x-x);
+            width: 0.5rem;
+            color: var(--color-primary-text);
+
+            *:has(> &) {
+                /* The SVG container */
+                display: flex;
+            }
+        }
+    }
+}
+@layer objects {
+    .o-subnav {
+        transition: var(--transition-transform);
+    }
+    .o-subnav--open {
+        transform: scaleY(-1);
+    }
+}
+
+
+
+/* GROUP ELEMENTS / TEXT / LINK STYLES {/ LINKS} / ACCESSIBILITY / FOCUS
 =================================================== */
 @layer base {
     :is(a, button, summary):focus-visible,
@@ -114,7 +168,7 @@
         font-weight: var(--font-family-ui-weight-strong);
         text-decoration: none;
 
-        background: var(--color-peak-purple);
+        background: var(--color-primary-accent);
         color: white;
 
         opacity: 0;
@@ -124,7 +178,7 @@
         /* If they're OK with animation */
         @media (prefers-reduced-motion: no-preference) {
             transform: translateY(-6rem);
-            transition: transform 0.3s var(--animation-timing-function-fast-out-slow-in);
+            transition: var(--transition-transform);
         }
 
         &:focus {
@@ -136,11 +190,15 @@
 
 
 
-/* GROUP COMPONENTS / SKIP TO CONTENT
+/* GROUP COMPONENTS / SITE HEADER
 =================================================== */
 .c-site-header {
     padding-block: var(--spacing-s-1);
     width: 100%;
+
+    .o-current-menu-item {
+        color: var(--color-primary-accent);
+    }
 }
 .c-site-header__inner {
     display: flex;
@@ -150,8 +208,80 @@
 .c-site-logo {
     padding: var(--spacing-s-x);
     margin: calc(0% - var(--spacing-s-x));
-    transition: transform 0.3s var(--animation-timing-function-fast-out-slow-in);
+    transition: var(--transition-transform);
+
+    & img {
+        user-select: none;
+    }
+
     &:hover {
         transform: scale(1.25) rotate(2deg);
+    }
+}
+.c-site-header__nav-desktop {
+    & ul {
+        padding: 0;
+        margin-inline-start: var(--spacing-l);
+        list-style: none;
+
+        &:first-child {
+            display: flex;
+            align-items: center;
+        }
+
+        &:first-child > li {
+            margin-inline-start: var(--spacing-l-1);
+        }
+
+        & ul {
+            position: absolute;
+            right: 0;
+            padding: var(--spacing-s-x) var(--spacing-s);
+            margin-block-start: var(--spacing-s-x);
+            margin-inline-start: calc(0% - var(--spacing-s));
+            background: white;
+            border-radius: 0.25rem;
+            border: var(--border-neutral);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+            & a {
+                display: block;
+                padding: var(--spacing-s) var(--spacing-s-x);
+                margin-inline: calc(0% - var(--spacing-s-x-x));
+                font-size: var(--font-size-s-x); line-height: var(--font-size-s-x-line-height);
+                white-space: nowrap;
+            }
+        }
+    }
+    & li {
+        position: relative;
+        line-height: 1;
+    }
+    & a {
+        display: flex;
+        align-items: center;
+        padding: var(--spacing-s-x-x);
+        margin: calc(0% - var(--spacing-s-x-x));
+        font-size: var(--font-size-s-x); line-height: var(--font-size-s-x-line-height);
+        font-weight: var(--font-family-ui-weight-strong);
+
+        &:hover {
+            color: var(--color-primary-accent);
+        }
+    }
+}
+
+
+
+/* GROUP UTILITIES / LAYOUT / HIDERS
+=================================================== */
+@media (min-width: 768px) {
+    .u-mq-768-down {
+        display: none!important;
+    }
+}
+@media (max-width: 767px) {
+    .u-mq-768-up {
+        display: none!important;
     }
 }

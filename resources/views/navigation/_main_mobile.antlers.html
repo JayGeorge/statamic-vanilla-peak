@@ -6,7 +6,7 @@
 {{# /navigation/_main_mobile.antlers.html #}}
 <nav
     x-data="{ mobileNavOpen: false }"
-    class="md:hidden"
+    class="u-mq-768-down"
     aria-label="{{ trans:strings.main_navigation }}"
     x-trap.inert.noscroll="mobileNavOpen"
     @keyup.escape.stop.prevent="mobileNavOpen = false"
