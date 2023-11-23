@@ -230,14 +230,12 @@
         &:first-child {
             display: flex;
             align-items: center;
-        }
-
-        &:first-child > li {
-            margin-inline-start: var(--spacing-l-1);
+            gap: var(--spacing-l-1);
         }
 
         & ul {
             position: absolute;
+            z-index: var(--z-index-nav);
             right: 0;
             padding: var(--spacing-s-x) var(--spacing-s);
             margin-block-start: var(--spacing-s-x);
