@@ -48,6 +48,10 @@
     --font-size-s-x: 0.875rem;
     --font-size-s-x-line-height: 1.25;
 
+    /* GROUP VARIABLES -- DECORATION -- SEPARATORS -- BORDERS - ordered from light to dark variants
+    =================================================== */
+    --border-neutral: 1px solid hsl(var(--color-black-hsl) / 10%);
+
     /* GROUP VARIABLES -- ANIMATIONS -- TIMING
     =================================================== */
     --animation-timing-function-fast-out-slow-in: cubic-bezier(.4,0,.2,1);
@@ -60,8 +64,6 @@
     =================================================== */
     --focus-offset-width: 4px;
     --focus-width: 2px;
-
-    --border-neutral: 1px solid hsl(var(--colour-black-hsl) / 10%);
 }
 @layer base {
     body {
