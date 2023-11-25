@@ -19,6 +19,10 @@
     --spacing-l: 1.8rem;
     --spacing-l-1: 2.5rem;
 
+    /* GROUP VARIABLES -- LAYOUT -- CONSTRAINTS -- MAX
+    =================================================== */
+    --max-width-1: 75rem;
+
     /* GROUP VARIABLES -- LAYOUT -- Z-INDEX
     =================================================== */
     --z-index-above-body: 1;
@@ -92,6 +96,11 @@
     }
     svg {
         stroke: currentColor;
+    }
+    :is([src*="svg"], svg) {
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
     }
 }
 
@@ -269,6 +278,44 @@
         &:hover {
             color: var(--color-primary-accent);
         }
+    }
+}
+
+
+
+/* GROUP COMPONENTS / SITE FOOTER
+=================================================== */
+.c-site-footer {
+    width: 100%;
+    padding-block: var(--spacing-s-1);
+    max-width: var(--max-width-1);
+    margin-inline: auto;
+}
+.c-site-footer__inner {
+    display: flex;
+    padding-inline: var(--spacing-l);
+    flex-direction: column;
+    gap: var(--spacing-m);
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.c-site-footer__1 {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-s-x);
+    line-height: var(--font-size-s-x-line-height);
+    font-weight: var(--font-family-ui-weight-strong);
+}
+.c-site-footer__2 {
+    display: flex;
+    margin-inline-start: var(--spacing-s-x);
+
+    & a {
+        padding-block: var(--spacing-s-x-x);
+        margin: calc(0% - var(--spacing-s-x-x));
     }
 }
 
