@@ -15,9 +15,7 @@
                 {{ /if }}
             >
                 <a
-                    class="
-                        {{ is_current || is_parent ?= 'o-current-menu-item' }}
-                    "
+                    class="{{ is_current || is_parent ?= 'o-current-menu-item' }}"
                     {{ if children }}
                         href="#"
                         @click.prevent="subnavOpen = !subnavOpen"
