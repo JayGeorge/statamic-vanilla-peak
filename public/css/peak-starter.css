@@ -332,7 +332,6 @@
     & ul {
         display: flex;
         flex-direction: column;
-        overflow: auto;
         list-style: none;
 
         & ul {
