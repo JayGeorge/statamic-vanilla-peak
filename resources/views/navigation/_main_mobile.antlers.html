@@ -24,7 +24,7 @@
     ></button>
 
     <div
-        class="c-site-header__nav-mobile__inner"
+        :class="mobileNavOpen ? 'o-mobile-nav-open c-site-header__nav-mobile__inner' : 'c-site-header__nav-mobile__inner'"
         x-show="mobileNavOpen"
     >
         <ul>
