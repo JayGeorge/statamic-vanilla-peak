@@ -16,10 +16,10 @@ scope;
 /* GROUP CSS
 =================================================== */
 /* These import statements are run through postcss-import and concatenated in production environments. */
+@import 'peak/starter.css'; /* <-- Peak's demo styles. Feel free to delete or move when you're ready to write custom CSS */
 @import 'base/variables.css';
-@import 'base/peak-starter.css'; /* <-- Peak's demo styles. Feel free to delete or move when you're ready to write custom CSS */
 @import 'base/base.css';
-@import 'base/elements.css';
+/* @import 'base/elements/elements.css'; */
 /* @import 'objects/objects.css'; */
 /* @import 'components/components.css'; */
 /* @import 'scope/scope.css'; */
