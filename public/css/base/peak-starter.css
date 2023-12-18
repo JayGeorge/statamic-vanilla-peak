@@ -9,8 +9,6 @@
 
 @layer base {
     body {
-        display: flex;
-        flex-direction: column;
         min-height: 100vh;
         background: white;
         color: var(--color-primary-text);
@@ -93,7 +91,7 @@
         padding-block-end: var(--spacing-s);
     }
     p {
-        margin-block-end: var(--spacing-s-1);
+        margin-block-end: var(--spacing-m);
         &:last-child {
             margin-block-end: 0;
         }
@@ -143,8 +141,6 @@
     /* GROUP ELEMENTS / FRAMEWORK / MAIN
     =================================================== */
     main {
-        padding-block-start: var(--spacing-l-4);
-
         &:focus {
             outline: none;
         }
@@ -199,7 +195,7 @@
     /* GROUP ELEMENTS / FRAMEWORK / HEADINGS / HIGH PRIORITY / VERTICAL SPACING
     =================================================== */
     h1, .h1 {
-        padding-block-end: var(--spacing-l);
+        padding-block-end: var(--spacing-l-1);
     }
     h2, .h2 {
         padding-block-end: var(--spacing-m);
@@ -584,6 +580,101 @@
     & a {
         padding-block: var(--spacing-s-x-x);
         margin: calc(0% - var(--spacing-s-x-x));
+    }
+}
+
+
+
+/* GROUP SCOPE / FRAMEWORK / ENTRY / ENTRY CONTENT
+=================================================== */
+/* HTML Example...
+
+    <article>
+        <h1>Title</h1>
+        <div class="s-entry-content-wrapper"> <-- controls the max-width
+            <div class="s-entry-content">
+                <p>Entry content</p>
+            </div>
+        </div>
+    </article>
+
+*/
+@layer scope {
+    .s-entry-content-wrapper {
+        margin-inline: auto;
+        padding-inline: var(--spacing-l);
+        padding-block-end: var(--spacing-l-4);
+        /* If it's the first entry-content on the page then push it away from the header */
+        :is(main) > section > article & {
+            padding-block-start: var(--spacing-l-4);
+        }
+    }
+    .s-entry-content {
+        max-width: var(--max-width-1);
+        margin-inline: auto;
+        padding-block-end: var(--spacing-l);
+
+        & > * {
+            max-width: var(--max-width-reading);
+            margin-inline: auto;
+        }
+
+        & > .h1 {
+            padding-block-start: 0;
+        }
+
+        :is(ol, ul) {
+            padding-inline-start: 0.8rem;
+        }
+
+        & p {
+            font-size: var(--font-size-s);
+        }
+
+        & p + :is(ol, ul) {
+            padding-block-start: var(--spacing-s);
+            padding-block-end: var(--spacing-l);
+        }
+
+        & li :is(ol, ul) {
+            /* e.g.
+
+            <ul>
+                <li>something</li>
+                <li>something else
+                    <ol> <-- we don't want this to have extra padding
+
+            */
+            padding-inline: 0;
+            padding-block-start: 0;
+        }
+
+        & li {
+            /* e.g. ul li */
+            padding-inline-start: var(--spacing-s-x-x);
+
+            /* Bard wraps <li> text in a <p> tag */
+            & p {
+                padding-block-end: 0!important;
+            }
+        }
+
+        /* e.g. when we have .s-entry-child divs following each other with blocks */
+        &:last-child,
+        /* e.g. cancel the last p tag from adding to the VERTICAL SPACING */
+        & > *:last-child {
+            padding-block-end: 0;
+        }
+
+        /* e.g. an img output wrapped in a figure element */
+        & figure {
+            margin: 0;
+        }
+
+        &:has(+ .s-entry-content--inline-image) {
+            /* Increase - push an inline image away from the paragraph above */
+            padding-block-end: var(--spacing-l-3);
+        }
     }
 }
 

@@ -19,7 +19,9 @@
 
     /* GROUP VARIABLES -- LAYOUT -- CONSTRAINTS -- MAX
     =================================================== */
+    /* From lowest to highest value */
     --max-width-1: 75rem;
+    --max-width-reading: 36rem;
 
     /* GROUP VARIABLES -- LAYOUT -- Z-INDEX
     =================================================== */
