@@ -321,9 +321,6 @@
             /* Offset for text */
             outline-offset: 5px;
         }
-        :is(nav) & {
-            outline-offset: 10px; /* Increase */
-        }
     }
 }
 
@@ -475,12 +472,10 @@
         position: fixed;
         z-index: var(--z-index-above-nav);
         display: flex;
-        right: 0;
-        bottom: 0;
+        right: var(--spacing-m);
+        top: var(--spacing-m);
         width: 4rem;
         height: 4rem;
-        margin-inline-end: var(--spacing-l);
-        margin-block-end: var(--spacing-l);
         justify-content: center;
         align-items: center;
         background: var(--color-primary-accent);
@@ -519,7 +514,6 @@
     inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     padding: var(--spacing-l) var(--spacing-l) var(--spacing-l-1);
     background: white;
 }
