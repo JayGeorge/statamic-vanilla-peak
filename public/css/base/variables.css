@@ -9,19 +9,23 @@
 
     --spacing-m: 1.5rem;
     --spacing-l: 1.8rem;
+    --spacing-l-static: 1.8rem;
     --spacing-l-1: 2.5rem;
 
     /* Smaller values for mobile */
     --spacing-l-2: min(14vw, 4.2rem);
     --spacing-l-3: min(18vw, 4.7rem);
     --spacing-l-3-horizontal: var(--spacing-s); /* Increased later */
-    --spacing-l-4: min(21vw, 7rem);
+    --spacing-l-4: min(18vw, 7.5rem);
+
+    --spacing-vh-s: min(12vw, 10vh);
+    --spacing-vh-m: min(22vw, 25vh);
 
     /* GROUP VARIABLES -- LAYOUT -- CONSTRAINTS -- MAX
     =================================================== */
     /* From lowest to highest value */
     --max-width-1: 75rem;
-    --max-width-reading: 36rem;
+    --max-width-reading: 38rem;
 
     /* GROUP VARIABLES -- LAYOUT -- Z-INDEX
     =================================================== */
@@ -46,8 +50,11 @@
 
     /* GROUP VARIABLES -- DECORATION -- TEXT -- WEIGHTS
     =================================================== */
+    --font-family-main-weight-normal: 350;
+    --font-family-main-weight-strong: 700;
+
+    --font-family-headline-weight-light: 700;
     --font-family-headline-weight-normal: 800;
-    --font-family-ui-weight-strong: 700;
 
     /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES
     =================================================== */
@@ -75,9 +82,17 @@
     --font-size-l-2: clamp(5.653em * 0.618, 12vw, 5.653em);
     --font-size-l-2-line-height: 1;
 
+    /* GROUP VARIABLES -- DECORATION -- BORDER RADIUS
+    =================================================== */
+    --border-radius-m: 6px;
+
     /* GROUP VARIABLES -- DECORATION -- SEPARATORS -- BORDERS - ordered from light to dark variants
     =================================================== */
     --border-neutral: 1px solid hsl(var(--color-black-hsl) / 10%);
+
+    /* GROUP VARIABLES -- DECORATION -- SEPARATORS -- BOX SHADOWS - ordered from light to dark variants
+    =================================================== */
+    --box-shadow-not-t: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
     /* GROUP VARIABLES -- ANIMATIONS -- TIMING
     =================================================== */
@@ -91,4 +106,78 @@
     =================================================== */
     --focus-offset-width: 4px;
     --focus-width: 2px;
+}
+/* --mq-root-variable-adjustments-1 */
+@media (min-width: 450px) {
+    :root {
+        /* GROUP VARIABLES -- SPACING
+        ===================================================  */
+        --spacing-l: 2.3rem;
+        --spacing-l-1: 3.5rem;
+    }
+}
+/* --mq-root-variable-adjustments-2 */
+@media (min-width: 730px) {
+    :root {
+        --spacing-l-3-horizontal: var(--spacing-l-3);
+    }
+}
+/* --mq-root-variable-adjustments-2-portrait */
+@media (min-width: 730px) and (orientation: portrait) {
+    :root {
+        /* e.g. iPad */
+        --spacing-vh-s: 5vh;
+        --spacing-vh-m: 14vh;
+        --spacing-l-4: 5rem;
+    }
+}
+@media (orientation: portrait) {
+    :root {
+        /* GROUP VARIABLES -- LAYOUT
+        =================================================== */
+        /* Switch to vmin at larger MQs, so things don't get too tall */
+        --vh-full: 100lvmin;
+    }
+}
+/* Notes...
+
+    --mq-root-variable-adjustments-smaller-laptops-after to --mq-root-variable-adjustments-larger-laptops-before
+    - Bear in mind users on smaller laptops do _not_ see things how you see things at a window width of 1440px.
+    - You can check exactly how they see it by going to System Preferences > Displays > Scaled
+
+*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    :root {
+        --font-bump: -0.09em; /* Decrease */
+    }
+}
+/* --mq-text-bump-1-after */
+@media (min-width: 1600px) {
+    :root {
+        /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES
+        =================================================== */
+        --font-size-s-x: 0.9em; /* Decrease */
+        /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES -- BUMPS
+        =================================================== */
+        --font-bump: 0.05vw; /* Increase */
+    }
+}
+/* --mq-text-bump-2-after */
+@media (min-width: 1800px) {
+    :root {
+        /* GROUP VARIABLES -- SPACING
+        =================================================== */
+        --spacing-vh-m: 22vh; /* Decrease */
+        /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES -- BUMPS
+        =================================================== */
+        --font-bump: 0.05vw; /* Increase */
+    }
+}
+/* --mq-text-bump-3-after */
+@media (min-width: 2300px) {
+    :root {
+        /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES -- BUMPS
+        =================================================== */
+        --font-bump: 0.1vw; /* Increase */
+    }
 }
