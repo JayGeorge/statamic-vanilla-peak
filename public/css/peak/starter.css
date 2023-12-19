@@ -480,6 +480,7 @@
         width: 4rem;
         height: 4rem;
         margin-inline-end: var(--spacing-l);
+        margin-block-end: var(--spacing-l);
         justify-content: center;
         align-items: center;
         background: var(--color-primary-accent);
@@ -562,7 +563,31 @@
 
 
 
-/* GROUP SCOPE / FRAMEWORK / ENTRY / ENTRY CONTENT
+/* GROUP COMPONENTS / BUTTONS
+=================================================== */
+@layer elements {
+    button,
+    [type="search"],
+    [type="submit"] {
+        /* Cancel default button appearance */
+        -webkit-appearance: none!important;
+        border: none;
+        cursor: pointer;
+    }
+    button {
+        /* Cancel default button appearance */
+        background: none;
+        /* To combat -apple-system-blueinput on iOS 15 */
+        color: initial;
+        & svg {
+            font-size: 1.3em;
+        }
+    }
+}
+
+
+
+/* GROUP SCOPE / ENTRY / ENTRY CONTENT
 =================================================== */
 /* HTML Example...
 
