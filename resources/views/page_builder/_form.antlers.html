@@ -5,9 +5,10 @@
 #}}
 
 {{# /page_builder/_form.antlers.html #}}
-<section class="fluid-container grid md:grid-cols-12 gap-8">
-    <div class="md:col-start-3 md:col-span-8">
-        {{ block:title ?= { partial:typography/h1 as="h2" class="mb-8" :content="block:title" } }}
+{{ partial:styles/stylesheet name='components/contact-form' }}
+<section class="c-contact-form">
+    {{# <div class="md:col-start-3 md:col-span-8"> #}}
+        <h2 class="h1">{{ block:title ?= {block:title } }}</h2>
         {{ block:text ?= { partial:typography/p :content="block:text" } }}
 
         {{ if form:handle }}
@@ -103,6 +104,6 @@
             {{# Call in the Peak Tools Alpine based Form Handler. #}}
             {{ partial:statamic-vanilla-peak-tools::snippets/form_handler }}
         {{ /if }}
-    </div>
+    {{# </div> #}}
 </section>
 {{# End: /page_builder/_form.antlers.html #}}

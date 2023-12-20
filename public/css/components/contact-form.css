@@ -1,0 +1,27 @@
+/* GROUP COMPONENTS / CONTACT FORM
+=================================================== */
+/* Notes...
+
+URL example
+-----------
+/contact-form
+
+What does it do?
+----------------
+Component to hold a contact form layout. Form styles in general are handled by elements/forms
+
+*/
+/* HTML Example...
+
+*/
+@layer components {
+    .c-contact-form {
+        max-width: var(--max-width-form);
+        margin-inline: auto;
+        padding: var(--spacing-vh-s) var(--spacing-l) var(--spacing-l);
+        
+        p {
+            font-size: var(--font-size-s);
+        }
+    }
+}
