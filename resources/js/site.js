@@ -1,8 +1,9 @@
 import Alpine from 'alpinejs'
 import collapse from '@alpinejs/collapse'
+import focus from '@alpinejs/focus'
 import morph from '@alpinejs/morph'
 import persist from '@alpinejs/persist'
-import focus from '@alpinejs/focus'
+import precognition from 'laravel-precognition-alpine';
 
 // Global get CSRF token function (used by forms).
 window.getToken = async () => {
@@ -18,5 +19,5 @@ window.getToken = async () => {
 
 // Call Alpine.
 window.Alpine = Alpine
-Alpine.plugin([collapse, focus, morph, persist])
+Alpine.plugin([collapse, focus, morph, persist, precognition])
 Alpine.start()
