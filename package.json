@@ -14,8 +14,7 @@
         "@alpinejs/morph": "^3.13.3",
         "@alpinejs/persist": "^3.13.3",
         "alpinejs": "^3.13.3",
-        "laravel-precognition-alpine": "^0.5.2",
-        "puppeteer": "^21.5.2"
+        "laravel-precognition-alpine": "^0.5.2"
     },
     "devDependencies": {
         "@csstools/postcss-nesting-experimental": "^2.0.0",
