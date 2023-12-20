@@ -1,5 +1,78 @@
 # Changelog
 
+## v16.7.0 (2023-12-20)
+
+### What's new
+- Update to Vite 5. a80bd774 by @robdekort
+
+## v16.6.0 (2023-12-19)
+
+### What's new
+- Skip Laravel Search Prompts on Windows (non WSL). 75824123 by @robdekort
+
+## v16.5.0 (2023-12-13)
+
+### What's improved
+- Form email improvements. #370 by @AndreasSchantl
+
+## v16.4.0 (2023-12-13)
+
+### What's improved
+- Move form error labels below form elements again to prevent jumpyness. Since they trigger on blur the user will almost certainly see them and on submit they get focused on the error summary anyways. 93be7746 by @robdekort
+- Remove redundant `focus-visible` config from `tailwind.config.peak.js`. 0f37fa8e by @robdekort
+
+## v16.3.0 (2023-12-12)
+
+### What's improved
+- Button attributes moved the Statamic Peak Tools Addon. References in your templates will automatically be updated when you update to Statamic Peak Tools v4.1.0. c0008108 by @robdekort
+
+## v16.2.0 (2023-12-10)
+
+### What's new
+- Use Video field for video embeds. f39567e3 by @robdekort
+
+## v16.1.3 (2023-12-07)
+
+### What's fixed
+- Only show error summary after submitting a form. This will automatically be fixed when you update to Statamic Peak Tools v4.0.3. 8d02c2e2 by @robdekort
+
+## v16.1.2 (2023-12-06)
+
+### What's fixed
+- Issues with checkboxes, radio buttons and asset fields not submitting and working properly. This will automatically be fixed when you update to Statamic Peak Tools 4.0.2. c0bbd263 by @robdekort
+
+## v16.1.1 (2023-12-04)
+
+### What's improved
+- Rename JS form driver handle. ab20f3cc by @robdekort
+
+## v16.1.0 (2023-12-01)
+
+### What's improved
+- More DRY form fields. #364 by @andreasschantl
+
+## v16.0.1 (2023-12-01)
+
+### What's new
+- Install Statamic Peak Commands v3.0.0 by default. 24064c63 by @robdekort
+
+## v16.0.0 (2023-12-01)
+
+### What's new
+- Laravel Precognition support and improved accessibility in Forms. Requires Statamic Peak Tools v4.0.0. #359 by @robdekort and @ryanmitchell
+- Add stack utilities in favour of outer-grid #363 by @robdekort
+
+## v15.18.0 (2023-11-30)
+
+### What's new
+- Option to clear peak content from install script #362 by @marcorieser
+- Add assets config option to append original filename. 13f15ca3 by @robdekort
+- Add `focus: true` to assets alt textarea. f8ada4fb by @robdekort
+
+### What's improved
+- Suggest installable languages based on Laravel Lang. #355 by @marcorierser
+- Check for GitHub CLI in install script #360. by @marcorieser
+
 ## v15.17.0 (2023-11-16)
 
 ### What's improved
