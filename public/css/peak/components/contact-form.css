@@ -19,8 +19,9 @@ Component to hold a contact form layout. Form styles in general are handled by e
         max-width: var(--max-width-form);
         margin-inline: auto;
         padding: var(--spacing-vh-s) var(--spacing-l) var(--spacing-l);
-        
+
         p {
+            margin-block-end: var(--spacing-l);
             font-size: var(--font-size-s);
         }
     }

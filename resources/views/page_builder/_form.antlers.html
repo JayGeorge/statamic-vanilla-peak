@@ -4,11 +4,12 @@
     @set page.page_builder.form
 #}}
 
+{{ partial:styles/stylesheet name='peak/components/contact-form' }}
 <!-- /page_builder/_form.antlers.html -->
 <section class="c-contact-form">
     <div class="md:col-start-3 md:col-span-8">
-        {{ block:title ?= { partial:typography/h1 as="h2" class="mb-8" :content="block:title" } }}
-        {{ block:text ?= { partial:typography/p :content="block:text" } }}
+        {{ block:title ?= '<h2 class="h1">{ block:title | nl2br } </h2>' }}
+        {{ block:text ?= '<p>{ block:text | nl2br } </p>' }}
 
         {{# Render form and use Alpine based Statamic conditional logic. #}}
         {{ if form:handle }}
@@ -35,7 +36,7 @@
                     </template>
 
                     {{# Honeypot spam protection. #}}
-                    <div class="hidden">
+                    <div class="fax">
                         <label class="font-bold" for="{{ honeypot }}">{{ trans:strings.form_honeypot }} <sup class="text-red-700">*</sup></label>
                         <input class="form-input w-full" id="{{ honeypot }}" type="text" name="{{ honeypot }}" tabindex="-1" autocomplete="off"/>
                     </div>

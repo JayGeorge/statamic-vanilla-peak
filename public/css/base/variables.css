@@ -26,6 +26,7 @@
     /* From lowest to highest value */
     --max-width-1: 75rem;
     --max-width-reading: 38rem;
+    --max-width-form: 50rem;
 
     /* GROUP VARIABLES -- LAYOUT -- Z-INDEX
     =================================================== */

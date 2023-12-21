@@ -13,10 +13,18 @@ ui,
 utilities,
 scope;
 
-/* GROUP CSS
+/* Import statements here are run through postcss-import and concatenated in production environments. */
+
+/* GROUP CSS / PEAK
 =================================================== */
-/* These import statements are run through postcss-import and concatenated in production environments. */
-@import 'peak/starter.css'; /* <-- Peak's demo styles. Feel free to delete or move when you're ready to write custom CSS */
+/* Peak's demo styles. Feel free to delete or move when you're ready to write custom CSS */
+@import 'peak/base/variables.css';
+@import 'peak/base/reset.css';
+@import 'peak/starter.css';
+@import 'peak/elements/forms.css';
+
+/* GROUP CSS / THEME
+=================================================== */
 @import 'base/variables.css';
 @import 'base/reset.css';
 /* @import 'base/elements/elements.css'; */
