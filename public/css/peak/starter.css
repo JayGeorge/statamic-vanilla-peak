@@ -310,7 +310,8 @@
     input:focus-visible,
     select:focus-visible,
     textarea:focus-visible {
-        outline: var(--focus-width) solid var(--color-focus);
+        outline: 3px solid var(--color-focus);
+        outline-offset: -3px;
     }
     /* ensure the focus outline is effective when a link is wrapped around a heading */
     a:has(> h2, h3, h4, h5, h6) {

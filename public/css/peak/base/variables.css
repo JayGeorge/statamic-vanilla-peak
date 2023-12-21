@@ -42,8 +42,10 @@
 
     --color-primary-text: hsl(var(--color-black-hsl));
     --color-primary-accent: var(--color-purple);
+
     --color-focus: var(--color-primary-accent);
     --color-link: #444;
+    --color-alert-red: #c03233;
 
     /* GROUP VARIABLES -- DECORATION -- TEXT -- FONTS
     =================================================== */
@@ -90,7 +92,7 @@
     /* GROUP VARIABLES -- DECORATION -- SEPARATORS -- BORDERS - ordered from light to dark variants
     =================================================== */
     --border-neutral: 1px solid hsl(var(--color-black-hsl) / 10%);
-    --border-form-input: 1px solid hsl(var(--color-black-hsl) / 25%);
+    --border-form-input: 1px solid hsl(var(--color-black-hsl) / 33%);
 
     /* GROUP VARIABLES -- DECORATION -- SEPARATORS -- BOX SHADOWS - ordered from light to dark variants
     =================================================== */
@@ -107,7 +109,7 @@
     /* GROUP VARIABLES -- OTHER
     =================================================== */
     --focus-offset-width: 4px;
-    --focus-width: 2px;
+    --focus-width: 3px;
 }
 /* --mq-root-variable-adjustments-1 */
 @media (min-width: 450px) {

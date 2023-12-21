@@ -79,6 +79,18 @@
     [type="password"] {
         width: 100%;
     }
+
+    fieldset {
+        padding: 0;
+        /* Override default */
+        margin: 0;
+        border: 0;
+    }
+}
+@layer components {
+    .c-required {
+        color: var(--color-alert-red);
+    }
 }
 
 
@@ -103,11 +115,6 @@
 /* GROUP ELEMENTS / FORMS / DECORATION / BORDERS
 =================================================== */
 @layer elements {
-    input:not([type="submit"]) {
-        border: var(--border-form-input);
-        border-radius: var(--border-radius-m);
-    }
-
     [type="text"],
     [type="email"],
     [type="password"],
@@ -120,6 +127,12 @@
         background: none;
         border: 0;
         border-radius: 0;
+    }
+
+    input:not([type="submit"]),
+    textarea {
+        border: var(--border-form-input);
+        border-radius: var(--border-radius-m);
     }
     /* GROUP ELEMENTS / FORMS / INPUT TYPES
     =================================================== */

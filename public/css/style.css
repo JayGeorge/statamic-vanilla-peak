@@ -22,6 +22,7 @@ scope;
 @import 'peak/base/reset.css';
 @import 'peak/starter.css';
 @import 'peak/elements/forms.css';
+@import 'peak/elements/form-grid.css';
 
 /* GROUP CSS / THEME
 =================================================== */

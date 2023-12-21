@@ -1,0 +1,29 @@
+/* GROUP ELEMENTS / FORMS / FORM GRID
+=================================================== */
+/* Notes..
+
+    - Handles form layouts
+
+*/
+/* HMTL Example...
+
+    
+
+*/
+@layer objects {
+    .c-form-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    /* A row of form fields */
+    .c-form-grid__row {
+        display: flex;
+        flex-direction: column;
+    }
+    .c-form-grid__row--25 { grid-column: span 3; }
+    .c-form-grid__row--33 { grid-column: span 4; }
+    .c-form-grid__row--50 { grid-column: span 6; }
+    .c-form-grid__row--66 { grid-column: span 8; }
+    .c-form-grid__row--75 { grid-column: span 9; }
+    .c-form-grid__row--100 { grid-column: span 12; }
+}
