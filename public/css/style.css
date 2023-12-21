@@ -25,11 +25,11 @@ scope;
 
 /* GROUP CSS / THEME
 =================================================== */
-@import 'base/variables.css';
-@import 'base/reset.css';
+/* Suggested structure below, but feel free to use your own */
+/* @import 'base/variables.css'; */
 /* @import 'base/elements/elements.css'; */
 /* @import 'objects/objects.css'; */
 /* @import 'components/components.css'; */
 /* @import 'scope/scope.css'; */
-@import 'utilities/utilities.css';
+/* @import 'utilities/utilities.css'; */
 /* @import 'plugins/plugins.css'; */
