@@ -27,6 +27,7 @@ export_paths:
   - lang/
   - public/robots.txt
   - public/build
+  - public/css
   - public/images
   - public/favicons/.gitkeep
   - public/files/.gitkeep
