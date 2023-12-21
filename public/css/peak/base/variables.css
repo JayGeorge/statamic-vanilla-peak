@@ -90,6 +90,7 @@
     /* GROUP VARIABLES -- DECORATION -- SEPARATORS -- BORDERS - ordered from light to dark variants
     =================================================== */
     --border-neutral: 1px solid hsl(var(--color-black-hsl) / 10%);
+    --border-form-input: 1px solid hsl(var(--color-black-hsl) / 25%);
 
     /* GROUP VARIABLES -- DECORATION -- SEPARATORS -- BOX SHADOWS - ordered from light to dark variants
     =================================================== */

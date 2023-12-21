@@ -1,3 +1,141 @@
-.fax {
-    display: none;
+/* GROUP ELEMENTS / FORMS / (CROSS POLLINATED)
+=================================================== */
+/* HTML Example...
+
+    <form class="c-form">
+        <div class="c-form__notes">
+            Your email address will not be published
+        </div>
+
+        <fieldset>
+            <legend>Leave a comment</legend>
+            <div>
+
+            </div>
+        </fieldset>
+    </form>
+
+*/
+@layer elements {
+    [type="text"],
+    [type="email"],
+    [type="tel"],
+    [type="password"],
+    [type="url"],
+    [type="tel"],
+    [type="search"],
+    [type="file"],
+    textarea {
+        vertical-align: top;
+        padding: 15px;
+        margin-block-end: 2rem;
+        border-radius: 2px;
+    }
+
+    [type="file"] {
+        padding-inline-start: 0;
+        border: 0!important;
+    }
+
+    select {
+        /* prevent long options making the box longer */
+        max-width: 100%;
+    }
+
+    label {
+        display: block;
+        padding-block-end: 1rem;
+        font-weight: var(--font-family-main-weight-strong);
+        /* Override line-height set on body */
+        line-height: 1;
+    }
+
+    textarea {
+        width: 100%;
+        /* e.g. something like Hubspot might be a bit short */
+        min-height: 200px;
+    }
+
+    [type="checkbox"],
+    [type="radio"] {
+        margin-right: var(--spacing-s);
+    }
+
+    /* Checkbox and Radio labels */
+    [type="checkbox"] + label,
+    [type="radio"] + label {
+        padding-block-end: var(--spacing-s-2);
+    }
+
+    [type="submit"] {
+        /* e.g. >> /blog/readability-test/ */
+        margin-top: var(--spacing-s);
+    }
+
+    /* Don't carpet bomb since we don't want a checkbox 100% width */
+    [type="email"],
+    [type="text"],
+    [type="url"],
+    [type="password"] {
+        width: 100%;
+    }
+}
+
+
+
+/* GROUP ELEMENTS / FORMS / DECORATION
+=================================================== */
+/* Override normalize */
+@layer base {
+    [placeholder],
+    ::-webkit-input-placeholder,
+    ::placeholder {
+        color: inherit;
+        opacity: 0.55;
+        /* e.g. "search this website" */
+        font-size: 1.25rem;
+    }
+    /* Hide the Honeypot https://statamic.dev/forms#honeypot */
+    .fax {
+        display: none;
+    }
+}
+/* GROUP ELEMENTS / FORMS / DECORATION / BORDERS
+=================================================== */
+@layer elements {
+    input:not([type="submit"]) {
+        border: var(--border-form-input);
+        border-radius: var(--border-radius-m);
+    }
+
+    [type="text"],
+    [type="email"],
+    [type="password"],
+    [type="tel"],
+    [type="number"],
+    [type="date"],
+    textarea {
+        /* Cancel default button appearance */
+        -webkit-appearance: none;
+        background: none;
+        border: 0;
+        border-radius: 0;
+    }
+    /* GROUP ELEMENTS / FORMS / INPUT TYPES
+    =================================================== */
+    [type="checkbox"],
+    [type="radio"] {
+        /* =JFG. So they always line up */
+        float: left;
+    }
+
+    [type="radio"],
+    [type="checkbox"] {
+        line-height: normal;
+    }
+    /* GROUP ELEMENTS / FORMS / INPUT TYPES / DECORATION
+    =================================================== */
+    [type="search"] {
+        border-radius: 5px;
+    }
 }
