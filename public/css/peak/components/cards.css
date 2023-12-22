@@ -42,6 +42,11 @@
         box-shadow: var(--box-shadow-not-t);
         border: var(--border-neutral);
 
+        a& {
+            /* Since the whole card is a link, text-decoration should be disabled */
+            text-decoration-line: none;
+        }
+
         > *:last-child {
             margin-block-start: auto;
             font-weight: var(--font-family-main-weight-strong);
