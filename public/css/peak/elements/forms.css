@@ -1,4 +1,4 @@
-/* GROUP ELEMENTS / FORMS / (CROSS POLLINATED)
+/* GROUP ELEMENTS / FORMS
 =================================================== */
 /* HTML Example...
 
@@ -17,6 +17,9 @@
 
 */
 @layer elements {
+    form {
+        --field-block-end: 2rem;
+    }
     [type="text"],
     [type="email"],
     [type="tel"],
@@ -28,48 +31,15 @@
     textarea {
         vertical-align: top;
         padding: 15px;
-        margin-block-end: 2rem;
+
+        margin-block-end: var(--field-block-end);
+        &:has(~ .c-field-error)  {
+            margin-block-end: var(--spacing-s-x);
+            border-color: var(--color-alert-red);
+            border-width: 3px;
+        }
+
         border-radius: 2px;
-    }
-
-    [type="file"] {
-        padding-inline-start: 0;
-        border: 0!important;
-    }
-
-    select {
-        /* prevent long options making the box longer */
-        max-width: 100%;
-    }
-
-    label {
-        display: block;
-        padding-block-end: 1rem;
-        font-weight: var(--font-family-main-weight-strong);
-        /* Override line-height set on body */
-        line-height: 1;
-    }
-
-    textarea {
-        width: 100%;
-        /* e.g. something like Hubspot might be a bit short */
-        min-height: 200px;
-    }
-
-    [type="checkbox"],
-    [type="radio"] {
-        margin-right: var(--spacing-s);
-    }
-
-    /* Checkbox and Radio labels */
-    [type="checkbox"] + label,
-    [type="radio"] + label {
-        padding-block-end: var(--spacing-s-2);
-    }
-
-    [type="submit"] {
-        /* e.g. >> /blog/readability-test/ */
-        margin-top: var(--spacing-s);
     }
 
     /* Don't carpet bomb since we don't want a checkbox 100% width */
@@ -80,15 +50,91 @@
         width: 100%;
     }
 
+    [type="checkbox"],
+    [type="radio"] {
+        width: 1rem;
+        height: 1rem;
+        /* =JFG. So they always line up */
+        float: left;
+        margin-right: var(--spacing-s);
+        line-height: normal;
+    }
+    /* Checkbox and Radio labels */
+    [type="checkbox"] + label,
+    [type="radio"] + label {
+        padding-block-end: var(--spacing-s-2);
+    }
+
+    [type="search"] {
+        border-radius: 5px;
+    }
+
+    [type="submit"] {
+        /* e.g. >> /blog/readability-test/ */
+        margin-top: var(--spacing-s);
+    }
+
+    [type="file"] {
+        padding-inline-start: 0;
+        border: 0!important;
+    }
+
     fieldset {
-        padding: 0;
         /* Override default */
+        padding: 0;
         margin: 0;
         border: 0;
+        padding-block-end: var(--spacing-l);
+    }
+
+    select {
+        /* prevent long options making the box longer */
+        max-width: 100%;
+    }
+
+    label {
+        display: block;
+        padding-block-end: var(--spacing-s);
+        /* Override line-height set on body */
+        line-height: 1.4;
+        &:not(:has([type="checkbox"])) {
+            font-weight: var(--font-family-main-weight-strong);
+        }
+        &:has([type="checkbox"]) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        /* e.g. something like Hubspot might be a bit short */
+        min-height: 200px;
     }
 }
 @layer components {
-    .c-required {
+    /* GROUP ELEMENTS / FORMS / FEEDBACK
+    =================================================== */
+    .c-form-errors {
+        padding: var(--spacing-m);
+        margin-block-end: var(--spacing-l);
+        background: var(--color-alert-red-background);
+        color: var(--color-alert-red);
+        border: 1px solid var(--color-alert-red);
+        border-radius: var(--border-radius-m);
+
+        a {
+            --color-focus: var(--color-alert-red);
+            color: var(--color-alert-red);
+            text-decoration-color: var(--color-alert-red);
+        }
+    }
+    .c-field-required {
+        color: var(--color-alert-red);
+    }
+    .c-field-error {
+        display: inline-block;
+        margin-block-end: var(--field-block-end);
         color: var(--color-alert-red);
     }
 }
@@ -133,22 +179,5 @@
     textarea {
         border: var(--border-form-input);
         border-radius: var(--border-radius-m);
-    }
-    /* GROUP ELEMENTS / FORMS / INPUT TYPES
-    =================================================== */
-    [type="checkbox"],
-    [type="radio"] {
-        /* =JFG. So they always line up */
-        float: left;
-    }
-
-    [type="radio"],
-    [type="checkbox"] {
-        line-height: normal;
-    }
-    /* GROUP ELEMENTS / FORMS / INPUT TYPES / DECORATION
-    =================================================== */
-    [type="search"] {
-        border-radius: 5px;
     }
 }

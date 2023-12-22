@@ -24,5 +24,10 @@ Component to hold a contact form layout. Form styles in general are handled by e
             margin-block-end: var(--spacing-l);
             font-size: var(--font-size-s);
         }
+
+        .o-btn-container {
+            display: flex;
+            justify-content: end;
+        }
     }
 }

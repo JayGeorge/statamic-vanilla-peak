@@ -17,7 +17,7 @@
                 <div x-data="formHandler()" x-cloak>
                     {{# Error notifications. #}}
                     <template x-if="form.hasErrors && submitted">
-                        <div id="summary" role="group" class="rounded border p-4 bg-red-50 border-red-700">
+                        <div id="summary" role="group" class="c-form-errors">
                             <h3 class="mb-2 leading-5 font-bold text-red-700">{{ trans:strings.form_error }}</h3>
                             <ul class="list-disc list-inside marker:text-red-700">
                                 <template x-for="(error, index) in form.errors">
@@ -36,7 +36,7 @@
 
                     {{# Honeypot spam protection. #}}
                     <div class="fax">
-                        <label class="font-bold" for="{{ honeypot }}">{{ trans:strings.form_honeypot }} <sup class="c-required">*</sup></label>
+                        <label class="font-bold" for="{{ honeypot }}">{{ trans:strings.form_honeypot }} <sup class="c-field-required">*</sup></label>
                         <input class="form-input w-full" id="{{ honeypot }}" type="text" name="{{ honeypot }}" tabindex="-1" autocomplete="off"/>
                     </div>
 
@@ -69,7 +69,7 @@
                                             <label class="font-bold" for="{{ handle }}">
                                                 {{ trans :key="field:display" }}
                                                 {{ if validate | contains('required') }}
-                                                    <sup class="c-required">*</sup>
+                                                    <sup class="c-field-required">*</sup>
                                                 {{ /if }}
 
                                                 {{ if field:instructions && instructions_position === 'above' }}
@@ -83,7 +83,7 @@
 
                                             {{# Inline error. #}}
                                             <template x-if="form.invalid('{{ handle }}')">
-                                                <span class="mt-1 text-red-700 text-sm font-bold" x-text="form.errors.{{ handle }}"></span>
+                                                <span class="c-field-error" x-text="form.errors.{{ handle }}"></span>
                                             </template>
 
                                             {{ if field:instructions && instructions_position === 'below' }}
@@ -98,15 +98,13 @@
                         </fieldset>
                     {{ /sections }}
 
-                    {{# Submit button, disabled on processing. #}}
-                    <div class="w-full flex justify-end">
-                        <div class="md:col-span-12 flex justify-end">
-                            {{ partial:components/button as="button" label="{ trans:strings.form_send }" }}
-                                {{ slot:attributes }}
-                                    @click.prevent="submit" :disabled="form.processing" :class="{ 'opacity-25 cursor-default': form.processing }"
-                                {{ /slot:attributes }}
-                            {{ /partial:components/button }}
-                        </div>
+                    <div class="o-btn-container">
+                        {{# Submit button, disabled on processing. #}}
+                        {{ partial:components/button as="button" label="{ trans:strings.form_send }" }}
+                            {{ slot:attributes }}
+                                @click.prevent="submit" :disabled="form.processing" :class="{ 'opacity-25 cursor-default': form.processing }"
+                            {{ /slot:attributes }}
+                        {{ /partial:components/button }}
                     </div>
                 </div>
             {{ /form:create }}

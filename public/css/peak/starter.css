@@ -45,7 +45,7 @@
         /* Opinion on this will differ depending on the font you choose. Do not carpet bomb line height with a * selector though */
         line-height: 1.5;
         /* https://web.dev/accent-color/ */
-        /* accent-color: hotpink; */
+        accent-color: var(--color-form-accent);
     }
     body {
         /* https://app.typographychecklist.com/ - 23. Use standard ligatures but avoid using discretionary ligatures in body text */
@@ -98,7 +98,6 @@
     }
     a {
         color: inherit;
-        text-decoration: inherit;
     }
     /* Don't affect Statamic's lists here, which contain p tags like this:
         <ol>
@@ -307,11 +306,11 @@
 =================================================== */
 @layer base {
     :is(a, button, summary):focus-visible,
-    input:focus-visible,
+    input:focus,
     select:focus-visible,
     textarea:focus-visible {
         outline: 3px solid var(--color-focus);
-        outline-offset: -3px;
+        outline-offset: 3px;
     }
     /* ensure the focus outline is effective when a link is wrapped around a heading */
     a:has(> h2, h3, h4, h5, h6) {
@@ -411,6 +410,10 @@
 }
 .c-site-header__nav-desktop,
 .c-site-header__nav-mobile {
+    & a {
+        /* https://app.typographychecklist.com/ - 43. Links that are clearly part of navigation usually don’t need a special link treatment. */
+        text-decoration: none;
+    }
     & ul ul a {
         display: block;
         white-space: nowrap;

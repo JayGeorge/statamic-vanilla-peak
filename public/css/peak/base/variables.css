@@ -21,6 +21,9 @@
     --spacing-vh-s: min(12vw, 10vh);
     --spacing-vh-m: min(22vw, 25vh);
 
+    --button-spacing-vertical: 1rem;
+    --button-spacing-horizontal: 1.5rem;
+
     /* GROUP VARIABLES -- LAYOUT -- CONSTRAINTS -- MAX
     =================================================== */
     /* From lowest to highest value */
@@ -45,7 +48,11 @@
 
     --color-focus: var(--color-primary-accent);
     --color-link: #444;
-    --color-alert-red: #c03233;
+
+    --color-form-accent: var(--color-primary-accent);
+    --color-alert-red: hsl(0 75% 50%);
+    /* Any more transparent and we lose AA when used with alert-red text */
+    --color-alert-red-background: hsl(0 75% 50% / 4%);
 
     /* GROUP VARIABLES -- DECORATION -- TEXT -- FONTS
     =================================================== */
@@ -66,7 +73,7 @@
 
     /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES -- OUTSIDE SCALE
     =================================================== */
-    --font-size-s: 1.1em;
+    --font-size-s: clamp(1.05em, 4vw, 1.1em);
     /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES -- AUGMENTED FOURTH
     =================================================== */
     /* Based on Augmented Fourth - https://type-scale.com/ */
