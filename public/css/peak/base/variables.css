@@ -50,9 +50,13 @@
     --color-link: #444;
 
     --color-form-accent: var(--color-primary-accent);
-    --color-alert-red: hsl(0 75% 50%);
+
+    --color-alert-warning: hsl(0 75% 50%);
     /* Any more transparent and we lose AA when used with alert-red text */
-    --color-alert-red-background: hsl(0 75% 50% / 4%);
+    --color-alert-warning-background: hsl(0 75% 50% / 4%);
+
+    --color-alert-success: hsl(163deg 60% 32%);
+    --color-alert-success-background: hsl(163deg 75% 50% / 4%);
 
     /* GROUP VARIABLES -- DECORATION -- TEXT -- FONTS
     =================================================== */
@@ -91,6 +95,10 @@
 
     --font-size-l-2: clamp(5.653em * 0.618, 12vw, 5.653em);
     --font-size-l-2-line-height: 1;
+
+    /* GROUP VARIABLES -- DECORATION -- ICONS -- SIZES
+    =================================================== */
+    --icon-size-m: 2rem;
 
     /* GROUP VARIABLES -- DECORATION -- BORDER RADIUS
     =================================================== */

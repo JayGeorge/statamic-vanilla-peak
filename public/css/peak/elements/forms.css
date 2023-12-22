@@ -35,7 +35,7 @@
         margin-block-end: var(--field-block-end);
         &:has(~ .c-field-error)  {
             margin-block-end: var(--spacing-s-x);
-            border-color: var(--color-alert-red);
+            border-color: var(--color-alert-warning);
             border-width: 3px;
         }
 
@@ -115,27 +115,59 @@
 @layer components {
     /* GROUP ELEMENTS / FORMS / FEEDBACK
     =================================================== */
+    .c-form-banner {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-s-1);
+        padding: var(--spacing-m);
+        margin-block-end: var(--spacing-l);
+        border-radius: var(--border-radius-m);
+        * {
+            text-wrap: pretty;
+        }
+        svg {
+            font-size: var(--icon-size-m);
+        }
+        /* E.g. h3 */
+        :last-child {
+            padding-block-end: 0;
+        }
+    }
     .c-form-errors {
         padding: var(--spacing-m);
         margin-block-end: var(--spacing-l);
-        background: var(--color-alert-red-background);
-        color: var(--color-alert-red);
-        border: 1px solid var(--color-alert-red);
+        background: var(--color-alert-warning-background);
+        color: var(--color-alert-warning);
+        border: 1px solid var(--color-alert-warning);
         border-radius: var(--border-radius-m);
 
         a {
-            --color-focus: var(--color-alert-red);
-            color: var(--color-alert-red);
-            text-decoration-color: var(--color-alert-red);
+            --color-focus: var(--color-alert-warning);
+            color: var(--color-alert-warning);
+            text-decoration-color: var(--color-alert-warning);
         }
     }
     .c-field-required {
-        color: var(--color-alert-red);
+        color: var(--color-alert-warning);
     }
     .c-field-error {
         display: inline-block;
         margin-block-end: var(--field-block-end);
-        color: var(--color-alert-red);
+        color: var(--color-alert-warning);
+    }
+}
+@layer modifiers {
+    /* GROUP ELEMENTS / FORMS / FEEDBACK / MODIFIERS
+    =================================================== */
+    .c-form-banner--success {
+        background: var(--color-alert-success-background);
+        color: var(--color-alert-success);
+        border: 1px solid var(--color-alert-success);
+    }
+    .c-form-banner--errors {
+        background: var(--color-alert-warning-background);
+        color: var(--color-alert-warning);
+        border: 1px solid var(--color-alert-warning);
     }
 }
 
