@@ -18,11 +18,11 @@
                 {{# Error notifications. #}}
                 <template x-if="form.hasErrors && submitted">
                     <div id="summary" role="group" class="c-form-errors">
-                        <h3 class="mb-2 leading-5 font-bold text-red-700">{{ trans:strings.form_error }}</h3>
-                        <ul class="list-disc list-inside marker:text-red-700">
+                        <h3>{{ trans:strings.form_error }}</h3>
+                        <ul>
                             <template x-for="(error, index) in form.errors">
                                 <li>
-                                    <a :href="`#${index}`" @click.prevent="$focus.focus(document.querySelector(`#${index}`))" x-text="error" class="p-1 -m-1 rounded focus:outline-none focus-visible:ring-2 ring-red-700 text-red-700 underline"></a>
+                                    <a :href="`#${index}`" @click.prevent="$focus.focus(document.querySelector(`#${index}`))" x-text="error"></a>
                                 </li>
                             </template>
                         </ul>
@@ -36,8 +36,8 @@
 
                 {{# Honeypot spam protection. #}}
                 <div class="fax">
-                    <label class="font-bold" for="{{ honeypot }}">{{ trans:strings.form_honeypot }} <sup class="c-field-required">*</sup></label>
-                    <input class="form-input w-full" id="{{ honeypot }}" type="text" name="{{ honeypot }}" tabindex="-1" autocomplete="off"/>
+                    <label for="{{ honeypot }}">{{ trans:strings.form_honeypot }} <sup class="c-field-required">*</sup></label>
+                    <input id="{{ honeypot }}" type="text" name="{{ honeypot }}" tabindex="-1" autocomplete="off"/>
                 </div>
 
                 {{# Render various form sections. #}}
@@ -66,7 +66,7 @@
                                     )}}
                                 ">
                                     {{ unless type == 'spacer' }}
-                                        <label class="font-bold" for="{{ handle }}">
+                                        <label for="{{ handle }}">
                                             {{ trans :key="field:display" }}
                                             {{ if validate | contains('required') }}
                                                 <sup class="c-field-required">*</sup>
@@ -78,7 +78,7 @@
                                         </label>
                                     {{ /unless }}
 
-                                    <div class="mt-2 flex flex-col gap-y-2">
+                                    <div>
                                         {{ field:field }}
 
                                         {{# Inline error. #}}
