@@ -28,8 +28,11 @@
     =================================================== */
     /* From lowest to highest value */
     --max-width-1: 75rem;
-    --max-width-reading: 38rem;
-    --max-width-form: 50rem;
+    --max-width-reading: 39rem;
+    /* Increased at later MQs */
+    --max-width-title: var(--max-width-reading);
+    --max-width-title: var(--max-width-title);
+    --max-width-form: var(--max-width-reading);
 
     /* GROUP VARIABLES -- LAYOUT -- Z-INDEX
     =================================================== */
@@ -40,14 +43,14 @@
 
     /* GROUP VARIABLES -- DECORATION -- COLOURS -- THEME
     =================================================== */
-    --color-black-hsl: 217.24deg 32.58% 17.45%;
+    --color-black-hsl: 217deg 53% 17%;
     --color-purple: oklch(53.24% .301 290.86);
 
     --color-primary-text: hsl(var(--color-black-hsl));
     --color-primary-accent: var(--color-purple);
 
     --color-focus: var(--color-primary-accent);
-    --color-link: #444;
+    --color-link: black;
 
     --color-form-accent: var(--color-primary-accent);
 
@@ -65,6 +68,7 @@
     /* GROUP VARIABLES -- DECORATION -- TEXT -- WEIGHTS
     =================================================== */
     --font-family-main-weight-normal: 350;
+    --font-family-main-weight-medium: 500;
     --font-family-main-weight-strong: 700;
 
     --font-family-headline-weight-light: 700;
@@ -156,6 +160,13 @@
         =================================================== */
         /* Switch to vmin at larger MQs, so things don't get too tall */
         --vh-full: 100lvmin;
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --max-width-title: 50rem;
+        --max-width-title-l: min(90vw, 60rem);
+        --max-width-form: 50rem;
     }
 }
 /* Notes...

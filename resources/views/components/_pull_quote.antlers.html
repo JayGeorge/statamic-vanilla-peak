@@ -5,24 +5,24 @@
 #}}
 
 {{# /components/_pull_quote.antlers.html #}}
-<figure
-    class="
-        not-prose my-8
-        {{ switch(
-            (size == 'md') => 'size-md',
-            (size == 'lg') => 'size-lg',
-            (size == 'xl') => 'size-xl',
-            () => 'size-md'
-        )}}
-    "
->
-    <blockquote class="p-0 m-0 text-3xl font-bold leading-snug text-neutral">
-        <span class="text-primary">&OpenCurlyDoubleQuote;</span>{{ quote | widont | nl2br }}<span class="text-primary">&CloseCurlyDoubleQuote;</span>
-    </blockquote>
-    {{ if author }}
-        <figcaption class="block mt-4 font-bold text-neutral">
-            <span class="text-primary">- </span>{{ author }}
-        </figcaption>
-    {{ /if }}
-</figure>
+<div class="s-entry-content-wrapper">
+    <figure
+        class="
+            c-pull-quote
+            {{ switch(
+                (size == 'md') => 'c-pull-quote--m',
+                (size == 'lg') => 'c-pull-quote--l',
+                (size == 'xl') => 'c-pull-quote--l-1',
+                () => 'c-pull-quote--m'
+            )}}
+        "
+    >
+        <blockquote>{{ quote | nl2br }}</blockquote>
+        {{ if author }}
+            <figcaption>
+                — {{ author }}
+            </figcaption>
+        {{ /if }}
+    </figure>
+</div>
 {{# End: /components/_pull_quote.antlers.html #}}

@@ -69,6 +69,22 @@
     figure, blockquote {
         margin-block: 0;
     }
+    blockquote {
+        margin: 0;
+        quotes: "“" "”" "‘" "’";
+        &::before {
+            content: open-quote;
+        }
+        &::after {
+            content: close-quote;
+        }
+        /* https://chriscoyier.net/2023/11/27/the-hanging-punctuation-property-in-CSS */
+        text-indent: -0.45em;
+        @supports (hanging-punctuation: first) {
+            text-indent: 0;
+            hanging-punctuation: first;
+        }
+    }
     /* Reset */
     figure {
         margin-inline: 0;
@@ -81,8 +97,8 @@
         padding-inline-start: 0;
     }
     /* Don't affect nav */
-    main li {
-        padding-block-end: var(--spacing-s-x);
+    main li:not(:last-child) {
+        padding-block-end: var(--spacing-s-1);
     }
     dl,
     dt,dd,
@@ -290,7 +306,7 @@
 }
 @layer scope {
     .s-entry-content a {
-        text-decoration-line: none;
+        font-weight: var(--font-family-main-weight-medium);
     }
 }
 /* GROUP ELEMENTS / FRAMEWORK / TEXT / LINK STYLES {/ LINKS} / ACCESSIBILITY / HOVER
@@ -603,10 +619,13 @@
     .s-entry-content-wrapper {
         max-width: var(--max-width-1);
         margin-inline: auto;
-        padding-block-end: var(--spacing-l-4);
+        padding-block-end: var(--spacing-l-2);
         /* If it's the first entry-content on the page then push it away from the header */
-        :is(main) > section > article & {
+        :is(main) > section > article &:first-child {
             padding-block-start: var(--spacing-vh-s);
+        }
+        &:last-child {
+            padding-block-end: var(--spacing-l-4);
         }
     }
     .s-entry-content {
@@ -619,7 +638,7 @@
         }
 
         :is(ol, ul) {
-            padding-inline-start: 0.8rem;
+            padding-inline-start: 0.85rem;
         }
 
         & p {

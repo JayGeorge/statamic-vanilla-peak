@@ -1,0 +1,56 @@
+/* GROUP COMPONENTS / PULL QUOTE
+=================================================== */
+/* Notes...
+
+URL example
+-----------
+/long-form-content
+
+What does it do?
+----------------
+Pull quote, with modifiers that pull the quote out at different lengths
+
+*/
+/* HTML Example...
+
+    <div class="s-entry-content-wrapper">
+        <figure class="c-pull-quote">
+            <blockquote>Maecenas imperdiet mauris non posuere dignissim. Duis tempus molestie efficitur.</blockquote>
+
+            <figcaption>
+                — Studio 1902
+            </figcaption>
+
+        </figure>
+    </div>
+
+*/
+@layer components {
+    .c-pull-quote {
+        max-width: var(--max-width-title);
+        margin-inline: auto;
+
+        padding-inline: var(--spacing-l);
+
+        blockquote {
+            padding-block-end: var(--spacing-m);
+            font-size: var(--font-size-m); line-height: var(--font-size-m-line-height);
+            font-weight: var(--font-family-headline-weight-light);
+
+            &::before, &::after {
+                color: var(--color-primary-accent);
+            }
+        }
+        figcaption {
+            font-weight: var(--font-family-main-weight-medium);
+        }
+    }
+}
+@layer modifiers {
+    .c-pull-quote--m {
+        max-width: var(--max-width-reading);
+    }
+    .c-pull-quote--l-1 {
+        max-width: var(--max-width-title-l);
+    }
+}

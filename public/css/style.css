@@ -24,6 +24,7 @@ scope;
 @import 'peak/elements/forms.css';
 @import 'peak/elements/form-grid.css';
 @import 'peak/components/buttons.css';
+@import 'peak/components/pull-quote.css';
 
 /* GROUP CSS / THEME
 =================================================== */
