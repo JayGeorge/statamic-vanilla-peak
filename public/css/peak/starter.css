@@ -644,8 +644,11 @@
             padding-block-start: 0;
         }
 
-        :is(ol, ul) {
+        ul {
             padding-inline-start: 0.85rem;
+        }
+        ol {
+            padding-inline-start: 1.1rem;
         }
 
         p {
