@@ -1,0 +1,39 @@
+/* GROUP COMPONENTS / IMAGE
+=================================================== */
+/* Notes...
+
+    URL example
+    -----------
+    /long-form-content
+
+    What does it do?
+    ----------------
+    A picture element, with modifiers that pull the quote out at different lengths
+
+*/
+/* HTML Example...
+
+    <figure class="c-image">
+        <picture><img></picture>
+        <figcaption class="block mt-2 text-sm text-neutral ">
+            Get to the top of the Peak.
+        </figcaption>
+    </figure>
+
+*/
+@layer components {
+    /* picture*/
+    .c-image {
+        max-width: var(--max-width-title-l);
+        margin-inline: auto;
+        padding: 0 var(--spacing-l) var(--spacing-l-1);
+    }
+}
+@layer modifiers {
+    .c-image--m {
+        max-width: var(--max-width-reading);
+    }
+    .c-image--l {
+        max-width: var(--max-width-title);
+    }
+}

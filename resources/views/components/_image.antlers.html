@@ -6,20 +6,18 @@
 
 {{# /components/_image.antlers.html #}}
 <figure
-    class="
-        not-prose my-8
+    class="c-image
         {{ switch(
-            (size == 'md') => 'size-md',
-            (size == 'lg') => 'size-lg',
-            (size == 'xl') => 'size-xl',
-            () => 'size-md'
+            (size == 'md') => 'c-image--m',
+            (size == 'lg') => 'c-image--l',
+            (size == 'xl') => 'c-image--l-1',
+            () => 'c-image--m'
         )}}
     "
 >
     {{
         partial:statamic-vanilla-peak-tools::components/picture
         :image="image"
-        class="w-full"
         cover="false"
         lazy="true"
         sizes="
