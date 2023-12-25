@@ -17,23 +17,31 @@ scope;
 
 /* GROUP CSS / PEAK
 =================================================== */
-/* Peak's demo styles. Feel free to delete or move when you're ready to write custom CSS */
+/* Peak's demo styles. Feel free to delete, move, or override when you're ready to write custom CSS */
 @import 'peak/base/variables.css';
 @import 'peak/base/reset.css';
-@import 'peak/starter.css';
+@import 'peak/elements/elements.css';
 @import 'peak/elements/forms.css';
 @import 'peak/elements/form-grid.css';
+@import 'peak/elements/tables.css';
+@import 'peak/components/components.css';
+@import 'peak/components/site-header.css';
+@import 'peak/components/site-footer.css';
 @import 'peak/components/buttons.css';
 @import 'peak/components/pull-quote.css';
 @import 'peak/components/image.css';
+@import 'peak/scope/entry-content.css';
+@import 'peak/utilities.css';
 
 /* GROUP CSS / THEME
 =================================================== */
 /* Suggested structure below, but feel free to use your own */
 /* @import 'base/variables.css'; */
 /* @import 'base/elements/elements.css'; */
+/* @import 'base/elements/forms.css'; */
+/* @import 'base/elements/tables.css'; */
 /* @import 'objects/objects.css'; */
 /* @import 'components/components.css'; */
-/* @import 'scope/scope.css'; */
+/* @import 'scope/entry-content.css'; */
 /* @import 'utilities/utilities.css'; */
-/* @import 'plugins/plugins.css'; */
+/* @import 'plugins/some-plugin.css'; */

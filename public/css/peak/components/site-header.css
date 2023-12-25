@@ -1,0 +1,143 @@
+/* GROUP COMPONENTS / SITE HEADER
+=================================================== */
+.c-site-header {
+    max-width: var(--max-width-1);
+    margin-inline: auto;
+    padding: var(--spacing-m) var(--spacing-l);
+    width: 100%;
+
+    .o-current-menu-item {
+        color: var(--color-primary-accent);
+    }
+}
+.c-site-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.c-site-logo {
+    padding: var(--spacing-s-x);
+    margin: calc(0% - var(--spacing-s-x));
+    transition: var(--transition-transform);
+
+    img {
+        user-select: none;
+    }
+
+    &:hover {
+        transform: scale(1.25) rotate(2deg);
+    }
+}
+.c-site-header__nav-desktop,
+.c-site-header__nav-mobile {
+    & a {
+        /* https://app.typographychecklist.com/ - 43. Links that are clearly part of navigation usually don’t need a special link treatment. */
+        text-decoration: none;
+    }
+    & ul ul a {
+        display: block;
+        white-space: nowrap;
+    }
+}
+.c-site-header__nav-desktop {
+    ul {
+        padding: 0;
+        margin-inline-start: var(--spacing-l);
+        list-style: none;
+
+        &:first-child {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-l-static);
+        }
+
+        a {
+            font-size: var(--font-size-s);
+        }
+
+        ul {
+            position: absolute;
+            z-index: var(--z-index-nav);
+            right: 0;
+            padding: var(--spacing-s-x) var(--spacing-s);
+            margin-block-start: var(--spacing-s-x);
+            margin-inline-start: calc(0% - var(--spacing-s));
+            background: white;
+            border-radius: 0.25rem;
+            border: var(--border-neutral);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+            & a {
+                padding: var(--spacing-s) var(--spacing-s-x);
+                margin-inline: calc(0% - var(--spacing-s-x-x));
+                font-size: var(--font-size-s-x); line-height: var(--font-size-s-x-line-height);
+            }
+        }
+    }
+    li {
+        position: relative;
+        line-height: 1;
+    }
+    a {
+        display: flex;
+        gap: var(--spacing-s-x-x);
+        align-items: center;
+        padding: var(--spacing-s-x-x);
+        font-size: var(--font-size-s-x); line-height: var(--font-size-s-x-line-height);
+        font-weight: var(--font-family-main-weight-strong);
+
+        &:hover {
+            color: var(--color-primary-accent);
+        }
+    }
+}
+.c-site-header__nav-mobile {
+    button {
+        position: fixed;
+        z-index: var(--z-index-above-nav);
+        display: flex;
+        right: var(--spacing-m);
+        top: var(--spacing-m);
+        width: 4rem;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-primary-accent);
+        color: white;
+        font-size: var(--font-size-s-x); line-height: var(--font-size-s-x-line-height);
+        font-weight: var(--font-family-main-weight-strong);
+        border-radius: 0.25rem;
+    }
+    ul:first-child {
+        padding: var(--spacing-s-1) 0 var(--spacing-s-x);
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        list-style: none;
+
+        ul {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+    a {
+        display: flex;
+        padding-block: var(--spacing-s-x);
+        margin-inline-start: var(--spacing-s-x-x);
+        align-items: center;
+        width: 100%;
+        font-size: var(--font-size-s-1); line-height: var(--font-size-s-1-line-height);
+        font-weight: var(--font-family-main-weight-strong);
+    }
+}
+.c-site-header__nav-mobile__inner {
+    position: fixed;
+    z-index: var(--z-index-nav);
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-l) var(--spacing-l) var(--spacing-l-1);
+    background: white;
+}

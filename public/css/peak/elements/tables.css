@@ -1,0 +1,35 @@
+/* GROUP ELEMENTS / TABLES
+=================================================== */
+/* Notes...
+
+	URL example
+	-----------
+	/long-form-content
+
+	What does it do?
+	----------------
+	
+
+*/
+/* HTML Example...
+
+    <div class="c-table-container">
+        <table>
+        </table
+    </div>
+
+*/
+@layer components {
+    .c-table-container {
+        border: 3px solid blue!important;
+        max-width: var(--max-width-reading);
+        margin-inline: auto;
+        padding: 0 var(--spacing-l) var(--spacing-l-2);
+
+        overflow: auto;
+
+        table {
+            min-width: 580px;
+        }
+    }
+}

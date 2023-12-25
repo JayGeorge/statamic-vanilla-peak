@@ -1,0 +1,94 @@
+/* GROUP SCOPE / ENTRY / ENTRY CONTENT
+=================================================== */
+/* HTML Example...
+
+    <article>
+        <h1>Title</h1>
+        <div class="s-entry-content-wrapper"> <-- controls the max-width
+            <div class="s-entry-content">
+                <p>Entry content</p>
+            </div>
+        </div>
+    </article>
+
+*/
+@layer scope {
+    .s-entry-content-wrapper {
+        max-width: var(--max-width-1);
+        margin-inline: auto;
+        padding-block-end: var(--spacing-l-2);
+        /* If it's the first entry-content on the page then push it away from the header */
+        :is(main) > section > article &:first-child {
+            padding-block-start: var(--spacing-vh-s);
+        }
+        &:last-child {
+            padding-block-end: var(--spacing-l-4);
+        }
+    }
+    .s-entry-content {
+        max-width: var(--max-width-reading);
+        margin-inline: auto;
+        padding-inline: var(--spacing-l);
+
+        > .h1 {
+            padding-block-start: 0;
+        }
+
+        ul {
+            padding-inline-start: 0.85rem;
+        }
+        ol {
+            padding-inline-start: 1.1rem;
+        }
+
+        p {
+            font-size: var(--font-size-s);
+
+            + :is(ol, ul) {
+                padding-block-start: var(--spacing-s);
+                padding-block-end: var(--spacing-l);
+            }
+        }
+
+        li :is(ol, ul) {
+            /* e.g.
+
+            <ul>
+                <li>something</li>
+                <li>something else
+                    <ol> <-- we don't want this to have extra padding
+
+            */
+            padding-inline: 0;
+            padding-block-start: 0;
+        }
+
+        li {
+            /* e.g. ul li */
+            padding-inline-start: var(--spacing-s-x-x);
+
+            /* Bard wraps <li> text in a <p> tag */
+            p {
+                padding-block-end: 0!important;
+            }
+        }
+
+        /* e.g. an img output wrapped in a figure element */
+        figure {
+            margin: 0;
+        }
+
+        &:has(+ .s-entry-content--inline-image) {
+            /* Increase - push an inline image away from the paragraph above */
+            padding-block-end: var(--spacing-l-3);
+        }
+
+        blockquote {
+            font-style: italic;
+            font-weight: var(--font-family-main-weight-medium);
+            padding-inline-start: var(--spacing-m);
+            margin-block-end: var(--spacing-l);
+            border-inline-start: 3px solid var(--color-primary-accent);
+        }
+    }
+}

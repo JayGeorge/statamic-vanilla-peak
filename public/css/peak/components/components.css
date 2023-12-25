@@ -1,0 +1,49 @@
+/* GROUP COMPONENTS / SKIP TO CONTENT
+=================================================== */
+/* Notes...
+
+    What does it do?
+    ----------------
+    "Skip to content" is a feature commonly found on websites designed to enhance accessibility. It's typically a hidden link placed at the top of a webpage that allows users who navigate via screen readers or keyboard shortcuts to bypass repetitive content (like navigation menus) and jump directly to the main content of the page. This helps users with disabilities or those who rely on assistive technologies to access and consume the essential information on a website more efficiently.
+
+*/
+/* HTML Example...
+
+    <a class="c-skip-to-content" href="#content">
+        Skip to content
+    </a>
+
+*/
+@layer components {
+    /* a*/
+    .c-skip-to-content {
+        position: fixed;
+        z-index: var(--z-index-above-nav);
+        top: 1rem;
+        left: 2rem;
+
+        padding: 0.5rem 1rem;
+
+        font-size: var(--font-size-s-x);
+        font-weight: var(--font-family-main-weight-strong);
+        text-decoration: none;
+
+        background: var(--color-primary-accent);
+        color: white;
+
+        opacity: 0;
+
+        outline-offset: 2px;
+
+        /* If they're OK with animation */
+        @media (prefers-reduced-motion: no-preference) {
+            transform: translateY(-6rem);
+            transition: var(--transition-transform);
+        }
+
+        &:focus {
+            transform: unset;
+            opacity: 1;
+        }
+    }
+}
