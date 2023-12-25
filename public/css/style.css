@@ -7,7 +7,7 @@ objects,
 components,
 modifiers,
 /* Third party e.g. https://plyr.io */
-vendors,
+plugins,
 /* Specific UI that should never be overridden, such as the layout in Alpine Components */
 ui,
 utilities,
