@@ -129,61 +129,48 @@
     =================================================== */
     --focus-offset-width: 4px;
     --focus-width: 3px;
-}
-/* --mq-root-variable-adjustments-1 */
-@media (min-width: 450px) {
-    :root {
+
+    /* --mq-root-variable-adjustments-1 */
+    @media (min-width: 450px) {
         /* GROUP VARIABLES -- SPACING
         ===================================================  */
         --spacing-l: 2.3rem;
         --spacing-l-1: 3.5rem;
     }
-}
-/* --mq-root-variable-adjustments-2 */
-@media (min-width: 730px) {
-    :root {
+    /* --mq-root-variable-adjustments-2 */
+    @media (min-width: 730px) {
         --spacing-l-3-horizontal: var(--spacing-l-3);
     }
-}
-/* --mq-root-variable-adjustments-2-portrait */
-@media (min-width: 730px) and (orientation: portrait) {
-    :root {
+    /* --mq-root-variable-adjustments-2-portrait */
+    @media (min-width: 730px) and (orientation: portrait) {
         /* e.g. iPad */
         --spacing-vh-s: 5vh;
         --spacing-vh-m: 14vh;
         --spacing-l-4: 5rem;
     }
-}
-@media (orientation: portrait) {
-    :root {
+    @media (orientation: portrait) {
         /* GROUP VARIABLES -- LAYOUT
         =================================================== */
         /* Switch to vmin at larger MQs, so things don't get too tall */
         --vh-full: 100lvmin;
     }
-}
-@media (min-width: 1024px) {
-    :root {
+    @media (min-width: 1024px) {
         --max-width-title: 50rem;
         --max-width-title-l: min(90vw, 60rem);
         --max-width-form: 50rem;
     }
-}
-/* Notes...
+    /* Notes...
 
-    --mq-root-variable-adjustments-smaller-laptops-after to --mq-root-variable-adjustments-larger-laptops-before
-    - Bear in mind users on smaller laptops do _not_ see things how you see things at a window width of 1440px.
-    - You can check exactly how they see it by going to System Preferences > Displays > Scaled
+        --mq-root-variable-adjustments-smaller-laptops-after to --mq-root-variable-adjustments-larger-laptops-before
+        - Bear in mind users on smaller laptops do _not_ see things how you see things at a window width of 1440px.
+        - You can check exactly how they see it by going to System Preferences > Displays > Scaled
 
-*/
-@media (min-width: 1025px) and (max-width: 1440px) {
-    :root {
+    */
+    @media (min-width: 1025px) and (max-width: 1440px) {
         --font-bump: -0.09em; /* Decrease */
     }
-}
-/* --mq-text-bump-1-after */
-@media (min-width: 1600px) {
-    :root {
+    /* --mq-text-bump-1-after */
+    @media (min-width: 1600px) {
         /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES
         =================================================== */
         --font-size-s-x: 0.9em; /* Decrease */
@@ -191,10 +178,8 @@
         =================================================== */
         --font-bump: 0.05vw; /* Increase */
     }
-}
-/* --mq-text-bump-2-after */
-@media (min-width: 1800px) {
-    :root {
+    /* --mq-text-bump-2-after */
+    @media (min-width: 1800px) {
         /* GROUP VARIABLES -- SPACING
         =================================================== */
         --spacing-vh-m: 22vh; /* Decrease */
@@ -202,10 +187,8 @@
         =================================================== */
         --font-bump: 0.05vw; /* Increase */
     }
-}
-/* --mq-text-bump-3-after */
-@media (min-width: 2300px) {
-    :root {
+    /* --mq-text-bump-3-after */
+    @media (min-width: 2300px) {
         /* GROUP VARIABLES -- DECORATION -- TEXT -- SIZES -- BUMPS
         =================================================== */
         --font-bump: 0.1vw; /* Increase */
