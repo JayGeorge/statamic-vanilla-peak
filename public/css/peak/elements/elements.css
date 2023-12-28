@@ -258,7 +258,7 @@
         }
         & svg:last-child {
             /* subnav arrow */
-            margin-inline-start: var(--spacing-s-x-x);
+            margin-inline-start: var(--spacing-s-xx);
             width: 0.7rem;
             color: var(--color-primary-text);
 

@@ -9,9 +9,10 @@
 */
 /* HTML Example...
 
-    <a class="c-skip-to-content" href="#content">
-        Skip to content
-    </a>
+    <body>
+        <header/>
+        <main/>
+    </body>
 
 */
 @layer base {
@@ -31,16 +32,8 @@
             [full-end]
         ;
         > *:not(style) {
-            display: grid;
             grid-column: main;
             max-width: var(--max-width-page);
-
-            grid-template-columns: repeat(12, 1fr);
-            column-gap: var(--spacing-s);
-
-            > * {
-                grid-column: 1 / -1;
-            }
         }
     }
 }

@@ -29,6 +29,6 @@
     margin-inline-start: var(--spacing-s-x);
 
     a {
-        padding-block: var(--spacing-s-x-x);
+        padding-block: var(--spacing-s-xx);
     }
 }

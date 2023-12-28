@@ -70,7 +70,7 @@
 
             & a {
                 padding: var(--spacing-s) var(--spacing-s-x);
-                margin-inline: calc(0% - var(--spacing-s-x-x));
+                margin-inline: calc(0% - var(--spacing-s-xx));
                 font-size: var(--font-size-s-x); line-height: var(--font-size-s-x-line-height);
             }
         }
@@ -81,9 +81,9 @@
     }
     a {
         display: flex;
-        gap: var(--spacing-s-x-x);
+        gap: var(--spacing-s-xx);
         align-items: center;
-        padding: var(--spacing-s-x-x);
+        padding: var(--spacing-s-xx);
         font-size: var(--font-size-s-x); line-height: var(--font-size-s-x-line-height);
         font-weight: var(--font-family-main-weight-strong);
 
@@ -126,7 +126,7 @@
     a {
         display: flex;
         padding-block: var(--spacing-s-x);
-        margin-inline-start: var(--spacing-s-x-x);
+        margin-inline-start: var(--spacing-s-xx);
         align-items: center;
         width: 100%;
         font-size: var(--font-size-s-1); line-height: var(--font-size-s-1-line-height);

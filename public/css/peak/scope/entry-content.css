@@ -64,7 +64,7 @@
 
         li {
             /* e.g. ul li */
-            padding-inline-start: var(--spacing-s-x-x);
+            padding-inline-start: var(--spacing-s-xx);
 
             /* Bard wraps <li> text in a <p> tag */
             p {
