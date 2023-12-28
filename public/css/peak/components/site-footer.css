@@ -3,7 +3,7 @@
 .c-site-footer {
     width: 100%;
     padding-block: var(--spacing-s-1);
-    max-width: var(--max-width-1);
+    max-width: var(--max-width-page);
     margin-inline: auto;
 }
 .c-site-footer__inner {

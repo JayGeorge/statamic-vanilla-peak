@@ -20,6 +20,7 @@ scope;
 /* Peak's demo styles. Feel free to delete, move, or override when you're ready to write custom CSS */
 @import 'peak/base/variables.css';
 @import 'peak/base/reset.css';
+@import 'peak/base/grid.css';
 @import 'peak/elements/elements.css';
 @import 'peak/elements/forms.css';
 @import 'peak/elements/form-grid.css';

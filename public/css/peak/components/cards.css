@@ -5,8 +5,6 @@
         gap: var(--spacing-m);
         max-width: var(--max-width-reading);
 
-        padding-inline: var(--spacing-l);
-
         &, & * {
             color: var(--color-primary-text);
         }
@@ -22,7 +20,7 @@
         }
 
         @media (min-width: 1024px) {
-            max-width: var(--max-width-1);
+            max-width: var(--max-width-page);
             grid-template-columns: repeat(3, 1fr);
             > :is(h2, h3, h4) {
                 padding-block-end: var(--spacing-s); /* Increase */

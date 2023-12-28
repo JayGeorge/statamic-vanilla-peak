@@ -1,0 +1,46 @@
+/* GROUP BASE / GRID
+=================================================== */
+/* Notes...
+
+    What does it do?
+    ----------------
+    Outlines a fluid grid for the page
+
+*/
+/* HTML Example...
+
+    <a class="c-skip-to-content" href="#content">
+        Skip to content
+    </a>
+
+*/
+@layer base {
+    body {
+        display: grid;
+        grid-template-columns:
+            [full-start]
+            var(--spacing-l)
+            [gutter-start]
+            1fr
+            [main-start]
+            auto
+            [main-end]
+            1fr
+            [gutter-end]
+            var(--spacing-l)
+            [full-end]
+        ;
+        > *:not(style) {
+            display: grid;
+            grid-column: main;
+            max-width: var(--max-width-page);
+
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: var(--spacing-s);
+
+            > * {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+}

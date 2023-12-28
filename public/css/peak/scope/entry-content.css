@@ -14,7 +14,7 @@
 */
 @layer scope {
     .s-entry-content-wrapper {
-        max-width: var(--max-width-1);
+        max-width: var(--max-width-page);
         margin-inline: auto;
         padding-block-end: var(--spacing-l-2);
         /* If it's the first entry-content on the page then push it away from the header */
@@ -28,7 +28,6 @@
     .s-entry-content {
         max-width: var(--max-width-reading);
         margin-inline: auto;
-        padding-inline: var(--spacing-l);
 
         > .h1 {
             padding-block-start: 0;
