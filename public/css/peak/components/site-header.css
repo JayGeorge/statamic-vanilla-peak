@@ -1,10 +1,9 @@
 /* GROUP COMPONENTS / SITE HEADER
 =================================================== */
 .c-site-header {
-    grid-column: gutter;
-
+    max-width: var(--max-width-1);
     margin-inline: auto;
-    padding-block: var(--spacing-m);
+    padding: var(--spacing-m) var(--spacing-l);
     width: 100%;
 
     .o-current-menu-item {
@@ -97,7 +96,7 @@
         position: fixed;
         z-index: var(--z-index-above-nav);
         display: flex;
-        right: var(--spacing-l);
+        right: var(--spacing-m);
         top: var(--spacing-m);
         width: 4rem;
         height: 4rem;
