@@ -205,7 +205,7 @@
         font-size: var(--font-size-s); line-height: var(--font-size-s-line-height);
     }
     h6, .h6 {
-        font-size: var(--font-size-s-x-1); line-height: var(--font-size-s-x-1-line-height);
+        font-size: var(--font-size-sx-1); line-height: var(--font-size-sx-1-line-height);
     }
     /* GROUP ELEMENTS / FRAMEWORK / HEADINGS / HIGH PRIORITY / VERTICAL SPACING
     =================================================== */
