@@ -18,11 +18,12 @@
                 {{ partial:statamic-vanilla-peak-tools::snippets/button_attributes }}
             {{ /button }}
         >
+            <h3>
                 <span id="{{ title | slugify }}">
-                    <h3>{{ title }}</h3>
+                    {{ title }}
                 </span>
+            </h3>
                 {{ text ?= '<p>{ text }</p>' }}
-            </div>
             {{ button }}
                 {{ partial:components/button as="span" faux="true" }}
             {{ /button }}
