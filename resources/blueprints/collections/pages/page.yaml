@@ -30,31 +30,31 @@ tabs:
         instructions: 'Basic SEO settings.'
         fields:
           -
-            import: 'statamic-peak-seo::seo_basic'
+            import: 'statamic-vanilla-peak-seo::seo_basic'
       -
         display: Advanced
         instructions: 'Advanced SEO settings.'
         fields:
           -
-            import: 'statamic-peak-seo::seo_advanced'
+            import: 'statamic-vanilla-peak-seo::seo_advanced'
       -
         display: 'Open Graph'
         instructions: 'Open Graph meta tags for social sharing.'
         fields:
           -
-            import: 'statamic-peak-seo::seo_open_graph'
+            import: 'statamic-vanilla-peak-seo::seo_open_graph'
       -
         display: Sitemap
         instructions: 'Sitemap configuration.'
         fields:
           -
-            import: 'statamic-peak-seo::seo_sitemap'
+            import: 'statamic-vanilla-peak-seo::seo_sitemap'
       -
         display: 'JSON-ld Schema'
         instructions: 'Custom JSON-ld schema objects.'
         fields:
           -
-            import: 'statamic-peak-seo::seo_jsonld'
+            import: 'statamic-vanilla-peak-seo::seo_jsonld'
   sidebar:
     display: Sidebar
     sections:
