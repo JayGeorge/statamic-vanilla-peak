@@ -1,0 +1,40 @@
+/* GROUP ELEMENTS / COOKIE NOTICE FOR VIDEOS
+=================================================== */
+/* Notes...
+
+	URL example
+	-----------
+	/long-form-content
+
+	What does it do?
+	----------------
+	Provides an inline cookie notice for videos
+
+*/
+/* HTML Example...
+
+    <div class="c-video-wrapper">
+        <div class="c-video">
+            <div class="c-cookie-notice-for-video">
+                <a href="">
+                    Accept video embed cookies to view this video.
+                </a>
+            </div>
+        </div>
+    </div>
+
+*/
+@layer components {
+    .c-cookie-notice-for-video {
+		position: absolute;
+        inset: 0;
+        z-index: var(--z-index-nav);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: var(--spacing-l);
+        background: var(--color-grey);
+    }
+}

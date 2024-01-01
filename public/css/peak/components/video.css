@@ -1,0 +1,54 @@
+/* GROUP COMPONENTS / VIDEOS
+=================================================== */
+/* Notes...
+
+	URL example
+	-----------
+	/long-form-content
+
+	What does it do?
+	----------------
+	Responsive videos with aspect-ratio.
+    A sizeable YouTube or Vimeo video rendered in a responsive container with an optional caption.
+
+*/
+/* HTML Example...
+
+    <div class="c-video-wrapper">
+		<div class="c-video">
+	        <iframe>
+	        </iframe>
+		</div>
+    </div>
+
+*/
+@layer components {
+	.c-video-wrapper {
+		max-width: var(--max-width-reading);
+		margin-inline: auto;
+
+		padding-inline: var(--spacing-l);
+		padding-block-end: var(--spacing-l-1);
+	}
+
+	.c-video {
+		position: relative;
+		aspect-ratio: 16/9;
+
+		iframe {
+			position: absolute;
+			inset: 0;
+
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+@layer modifiers {
+	.c-video-wrapper--l {
+		max-width: var(--max-width-title);
+	}
+	.c-video-wrapper--l-1 {
+		max-width: var(--max-width-title-l);
+	}
+}
