@@ -43,9 +43,11 @@
 
     /* GROUP VARIABLES -- DECORATION -- COLOURS -- THEME
     =================================================== */
-    --color-grey: hsl(217deg 23% 96%);
+    /* Dark to light */
     --color-black-hsl: 217deg 53% 17%;
     --color-purple: oklch(53.24% .301 290.86);
+    --color-gray-background: hsl(217deg 23% 96%);
+    --color-gray-aa: hsl(0deg 0% 40%);
 
     --color-primary-text: hsl(var(--color-black-hsl));
     --color-primary-accent: var(--color-purple);

@@ -31,10 +31,6 @@
         cursor: pointer;
         /* Hover states with a slight delay, but focus without any because keyboard users want quick feedback. Do not use 'all' because it resizes slowly when resizing the browser window */
         transition: background-color 0.2s ease 0s;
-        &:last-child {
-            margin-right: 0;
-            margin-inline-start: auto;
-        }
     }
     .c-btn {
         position: relative;
@@ -100,5 +96,19 @@
     .c-btn a:hover {
         /* Cancel link hover effect */
         border-bottom: 0;
+    }
+
+    /* 2 */
+    .c-btn--2 a,
+    button.c-btn--2 {
+        background: var(--color-gray-background);
+        border-radius: var(--border-radius-m);
+    }
+
+    /* Small */
+    .c-btn--s {
+        --button-spacing-vertical: 0.7rem;
+        --button-spacing-horizontal: 1rem;
+        font-size: 1rem;
     }
 }

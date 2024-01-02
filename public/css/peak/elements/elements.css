@@ -317,7 +317,8 @@
 =================================================== */
 @layer base {
     :is(a, button, summary):focus-visible,
-    input:focus,
+    /* focus-visible on input so we don't cause an outline when ticking cookie choices */
+    input:focus-visible,
     select:focus-visible,
     textarea:focus-visible {
         outline: 3px solid var(--color-focus);

@@ -28,6 +28,7 @@ scope;
 @import 'peak/components/site-header.css';
 @import 'peak/components/site-footer.css';
 @import 'peak/components/buttons.css';
+@import 'peak/components/hero-buttons.css';
 @import 'peak/components/pull-quote.css';
 @import 'peak/components/image.css';
 @import 'peak/components/video.css';
@@ -47,3 +48,4 @@ scope;
 /* @import 'scope/entry-content.css'; */
 /* @import 'utilities/utilities.css'; */
 /* @import 'plugins/some-plugin.css'; */
+/* @import 'scratch.css'; */
