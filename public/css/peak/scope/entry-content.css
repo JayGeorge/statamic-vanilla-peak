@@ -21,8 +21,13 @@
         :is(main) > section > article &:first-child {
             padding-block-start: var(--spacing-vh-s);
         }
-        &:last-child {
+        /* The last entry-content but not if it's the last main item. */
+        main > *:not(:last-child) &:last-child {
             padding-block-end: var(--spacing-l-4);
+        }
+        /* If it's the last item set padding to 0 */
+        main > section:last-child &:last-child {
+            padding-block-end: 0;
         }
     }
     .s-entry-content {

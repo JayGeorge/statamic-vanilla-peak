@@ -300,14 +300,14 @@
     }
 }
 @layer scope {
-    .s-entry-content a {
+    .s-entry-content a:not(.c-btn) {
         font-weight: var(--font-family-main-weight-medium);
     }
 }
 /* GROUP ELEMENTS / FRAMEWORK / TEXT / LINK STYLES {/ LINKS} / ACCESSIBILITY / HOVER
 =================================================== */
 @layer scope {
-    .s-entry-content a:hover {
+    .s-entry-content a:not(.c-btn):hover {
         /* Change these */
         text-decoration-color: red;
         color: red;
