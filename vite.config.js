@@ -12,8 +12,6 @@ export default defineConfig(({ command, mode }) => {
                     // Vanilla CSS from =JFG.
                     'public/css/style.css',
                     // 'public/css/something-else.css',
-                    // JS
-                    // 'public/js/something-else.js',
                 ]
             })
         ],
