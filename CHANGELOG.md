@@ -1,5 +1,49 @@
 # Changelog
 
+## v17.5.0 (2024-02-03)
+
+### What's improved
+- Set stack space property only on direct children when using stacks so you can nest stacks without conflicts. 0a48a9fe by @robdekort
+
+## v17.4.1 (2024-01-30)
+
+### What's new
+- Fix form layout on small screens. f7e59296 by @robdekort
+
+## v17.4.0 (2024-01-26)
+
+### What's new
+- Extract block wrapper to partial. e5d86683 by @robdekort
+- Lower default prose line height. c31e3a70 by @robdekort
+
+## v17.3.0 (2024-01-24)
+
+### What's new
+- Add exempt from alt toggle to images blueprint used in Statamic Peak Tools 4.4.0. c541255f by @robdekort
+- A prompt in the post install hook to set a locale for the default site. 966ee827 by @robdekort
+- Use local PNG logo as email header. 93fb197b by @robdekort
+
+## v17.2.0 (2024-01-22)
+
+### What's new
+- Update dependencies and recompile assets. 786324ef by @robdekort
+
+## v17.1.1 (2024-01-19)
+
+### What's new
+- Add back `white-space:pre-line` to form emails. Reverted from #370. 6eaa4e9c by @robdekort
+
+## v17.1.0 (2024-01-18)
+
+### What's new
+- A more accessible cards block. 8111c7a0 by @robdekort
+
+## v17.0.0 (2024-01-05)
+
+### What's new
+- Fluid grid. #373 by @robdekort and @marcorieser
+- Rewritten Consent banner support. #374 by @robdekort and @marcorieser
+
 ## v16.8.1 (2023-12-25)
 
 ### What's fixed
