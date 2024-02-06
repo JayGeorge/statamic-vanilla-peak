@@ -5,7 +5,7 @@
 
 {{# /layout.antlers.html #}}
 <!doctype html>
-<html lang="{{ site:short_locale }}">
+<html lang="{{ site:short_locale }}" data-no-js class="{{ stack:scope_classes }}{{ value }}{{ !last ?= ' ' }}{{ /stack:scope_classes }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +16,11 @@
         {{ partial:statamic-vanilla-peak-tools::snippets/live_preview }}
         {{# Vanilla CSS from =JFG. #}}
         {{ partial:styles/stylesheets }}
+        <script>
+            /* Tell the html ASAP (without JS) to prevent a flicker of DOM changes e.g. nav collapsed. */
+            document.documentElement.removeAttribute('data-no-js');
+            document.documentElement.setAttribute('data-js', '');
+        </script>
     </head>
     <body>
         {{ stack:seo_body }}
