@@ -32,7 +32,7 @@ scope;
 @import 'peak/components/pull-quote.css';
 @import 'peak/components/image.css';
 @import 'peak/components/video.css';
-@import 'peak/components/banners/cookie-notices.css';
+@import 'peak/components/banners/consent.css';
 @import 'peak/scope/entry-content.css';
 @import 'peak/utilities.css';
 
