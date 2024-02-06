@@ -11,6 +11,7 @@ export default defineConfig(({ command, mode }) => {
                     'resources/js/site.js',
                     // Vanilla CSS from =JFG.
                     'public/css/style.css',
+                    'public/css/peak/components/contact-form.css',
                     // 'public/css/something-else.css',
                 ]
             })
