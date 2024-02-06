@@ -35,7 +35,7 @@
         blockquote {
             padding-block-end: var(--spacing-m);
             font-size: var(--font-size-m); line-height: var(--font-size-m-line-height);
-            font-weight: var(--font-family-headline-weight-light);
+            font-weight: var(--font-family-heading-weight-light);
 
             &::before, &::after {
                 color: var(--color-primary-accent);

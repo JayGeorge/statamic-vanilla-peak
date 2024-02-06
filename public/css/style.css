@@ -17,13 +17,13 @@ scope;
 
 /* GROUP CSS / PEAK
 =================================================== */
-/* Peak's demo styles. Feel free to delete, move, or override when you're ready to write custom CSS */
+/* Peak's demo styles. Feel free to delete, move, or override when you're ready to write custom CSS. One approach is to copy imports over to your own structure as you start to override them, and then comment out the peak version. This way, you can always revert if you want to check out the defaults again. */
 @import 'peak/base/variables.css';
 @import 'peak/base/reset.css';
-@import 'peak/elements/elements.css';
-@import 'peak/elements/forms.css';
-@import 'peak/elements/form-grid.css';
-@import 'peak/elements/tables.css';
+@import 'peak/base/elements/elements.css';
+@import 'peak/base/elements/forms.css';
+@import 'peak/base/elements/form-grid.css';
+@import 'peak/base/elements/tables.css';
 @import 'peak/components/components.css';
 @import 'peak/components/site-header.css';
 @import 'peak/components/site-footer.css';
@@ -47,5 +47,6 @@ scope;
 /* @import 'components/components.css'; */
 /* @import 'scope/entry-content.css'; */
 /* @import 'utilities/utilities.css'; */
+/* @import 'utilities/animations.css'; */
 /* @import 'plugins/some-plugin.css'; */
 /* @import 'scratch.css'; */

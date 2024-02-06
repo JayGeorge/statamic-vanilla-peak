@@ -47,9 +47,9 @@
 			}
 			strong {
 				display: block;
-				font-size: var(--font-size-sx); line-height: var(--font-size-sx-line-height);
+				font-size: var(--font-size-s-3); line-height: var(--font-size-s-3-line-height);
 				+ span {
-					font-size: var(--font-size-sxx);
+					font-size: var(--font-size-s-4);
 					display: inline-block;
 					color: var(--color-gray-aa);
 				}

@@ -1,0 +1,36 @@
+/* If they're OK with animation */
+@media (prefers-reduced-motion: no-preference) {
+    /* GROUP UTILTIES / ANIMATIONS / KEYFRAMES / FADES
+    =================================================== */
+    /* Components > Framework > Nav */
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 5vh, 0);
+        }
+
+        75%, 100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+    /* GROUP UTILTIES / FRAMEWORK / ANIMATIONS / KEYFRAMES / WIPES
+    =================================================== */
+    @keyframes wipe-in-down {
+        from {
+            clip-path: inset(0 0 100% 0);
+        }
+        to {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+}

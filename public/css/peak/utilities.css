@@ -18,4 +18,34 @@
             display: none!important;
         }
     }
+
+    .u-link-style-none {
+        &, * {
+            text-decoration: none;
+            color: inherit;
+            border-bottom: 0;
+        }
+    }
+
+    /* Text meant only for screen readers. */
+    .u-screen-reader-text {
+        clip: rect(1px, 1px, 1px, 1px);
+
+        position: absolute!important;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        /* Needed if the text should be visible on keyboard focus */
+        &:focus {
+            clip: auto!important;
+
+            z-index: 100000; /* Above WP toolbar. */
+            display: block;
+            top: 0;
+            left: 0;
+
+            width: auto;
+            height: auto;
+        }
+    }
 }

@@ -139,7 +139,6 @@
         font-weight: var(--font-family-main-weight-strong);
     }
     svg {
-        stroke: currentColor;
         fill: currentColor;
         /* For SVG icons */
         width: 1em;
@@ -173,8 +172,8 @@
         text-wrap: pretty;
     }
     h1, .h1, h1 a, .h1 a, h2, .h2, h2 a, .h2 a, h3, .h3, h3 a, .h3 a {
-        font-family: var(--font-family-headline);
-        font-weight: var(--font-family-headline-weight-normal);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-family-heading-weight-normal);
         /* https://app.typographychecklist.com/ 91 - Use discretionary ligatures and swashes in headlines */
         font-feature-settings: "kern", "liga", "clig", "calt", "dlig", "swsh";
         /* Override iOS Safari's user agent stylesheet */
@@ -186,26 +185,26 @@
         color: initial;
     }
     h2, .h2, h3, .h3, h4, .h4, h4 a, .h4 a {
-        font-family: var(--font-family-headline);
-        font-weight: var(--font-family-headline-weight-light);
+        font-family: var(--font-family-heading);
+        font-weight: var(--font-family-heading-weight-light);
     }
     h1, .h1 {
-        font-size: var(--font-size-l); line-height: var(--font-size-l-line-height);
+        font-size: var(--font-size-l-1); line-height: var(--font-size-l-1-line-height);
     }
     h2, .h2 {
         font-size: var(--font-size-m); line-height: var(--font-size-m-line-height);
     }
     h3, .h3 {
-        font-size: var(--font-size-s); line-height: var(--font-size-s-line-height);
+        font-size: var(--font-size-s-2); line-height: var(--font-size-s-line-height);
     }
     h4, .h4 {
         font-size: var(--font-size-s-1); line-height: var(--font-size-s-1-line-height);
     }
     h5, .h5 {
-        font-size: var(--font-size-s); line-height: var(--font-size-s-line-height);
+        font-size: var(--font-size-s-2); line-height: var(--font-size-s-line-height);
     }
     h6, .h6 {
-        font-size: var(--font-size-sx-1); line-height: var(--font-size-sx-1-line-height);
+        font-size: var(--font-size-s-3-1); line-height: var(--font-size-s-3-1-line-height);
     }
     /* GROUP ELEMENTS / FRAMEWORK / HEADINGS / HIGH PRIORITY / VERTICAL SPACING
     =================================================== */

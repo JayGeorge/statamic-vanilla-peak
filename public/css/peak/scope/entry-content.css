@@ -47,7 +47,7 @@
         }
 
         p {
-            font-size: var(--font-size-s);
+            font-size: var(--font-size-s-2);
 
             + :is(ol, ul) {
                 padding-block-start: var(--spacing-s);
@@ -94,6 +94,10 @@
             padding-inline-start: var(--spacing-m);
             margin-block-end: var(--spacing-l);
             border-inline-start: 3px solid var(--color-primary-accent);
+        }
+        /* Use this if you want to embed entry content in a component that already handles inline padding */
+        .s-entry-content--flush {
+            padding-inline: 0;
         }
     }
 }

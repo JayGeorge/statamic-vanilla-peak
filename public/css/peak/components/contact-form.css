@@ -22,7 +22,7 @@ Component to hold a contact form layout. Form styles in general are handled by e
 
         p {
             margin-block-end: var(--spacing-l);
-            font-size: var(--font-size-s);
+            font-size: var(--font-size-s-2);
         }
 
         .o-btn-container {

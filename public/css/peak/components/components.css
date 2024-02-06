@@ -24,7 +24,7 @@
 
         padding: 0.5rem 1rem;
 
-        font-size: var(--font-size-sx);
+        font-size: var(--font-size-s-3);
         font-weight: var(--font-family-main-weight-strong);
         text-decoration: none;
 
@@ -48,23 +48,17 @@
     }
 }
 
-:has(+ .c-caption) {
-	padding-block-end: 0;
-	margin-block-end: var(--spacing-s);
-}
-.c-caption {
-	font-size: var(--font-size-sx);
-}
-
 
 
 /* GROUP COMPONENTS / CAPTION
 =================================================== */
-/* e.g used after a table */
-:has(+ .c-caption) {
-	padding-block-end: 0;
-	margin-block-end: var(--spacing-s);
-}
-.c-caption {
-	font-size: var(--font-size-sx);
+@layer components {
+    /* e.g used after a table */
+    :has(+ .c-caption) {
+        padding-block-end: 0;
+        margin-block-end: var(--spacing-s);
+    }
+    .c-caption {
+        font-size: var(--font-size-s-3);
+    }
 }

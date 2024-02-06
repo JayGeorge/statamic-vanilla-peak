@@ -23,21 +23,20 @@
         /* I've found it more stable to use pxls rather than ems. */
         --button-spacing: var(--button-spacing-vertical) var(--button-spacing-horizontal);
         padding: var(--button-spacing);
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-s-2);
         font-weight: var(--font-family-main-weight-strong);
         text-decoration-line: none;
-        cursor: pointer;
         /* Hover states with a slight delay, but focus without any because keyboard users want quick feedback. Do not use 'all' because it resizes slowly when resizing the browser window */
         transition: background-color 0.2s ease 0s;
     }
     .c-btn {
         position: relative;
-        display: inline-block;
-        margin-block-end: 1.25rem;
         /* e.g. icons in buttons */
-        display: flex;
+        display: inline-flex;
         align-items: center;
+        margin-block-end: 1.25rem;
         text-align: left;
+        text-transform: uppercase;
 
         :is(p) + & {
             margin-block-start: var(--spacing-s-2);
@@ -60,6 +59,8 @@
         border: none;
     }
     button {
+        /* Improve usability */
+        cursor: pointer;
         /* Cancel default button appearance */
         background: none;
         /* To combat -apple-system-blueinput on iOS 15 */
@@ -89,10 +90,6 @@
         https://material-components.github.io/material-components-web-catalog/#/component/button
 
     */
-    .c-btn a:hover {
-        /* Cancel link hover effect */
-        border-bottom: 0;
-    }
 
     /* 2 */
     .c-btn--2 {
