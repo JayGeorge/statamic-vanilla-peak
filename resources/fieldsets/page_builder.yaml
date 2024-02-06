@@ -1,4 +1,4 @@
-title: 'Page builder'
+title: ': Peak – Page builder'
 fields:
   -
     handle: page_builder
@@ -23,7 +23,7 @@ fields:
                 -
                   import: form
             cards:
-              display: 'Cards'
+              display: Cards
               instructions: 'Show linkable cards with text.'
               icon: link
               fields:

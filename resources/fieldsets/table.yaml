@@ -1,4 +1,4 @@
-title: Table
+title: ': Peak – Table'
 fields:
   -
     handle: size
@@ -6,7 +6,7 @@ fields:
   -
     handle: first_row_headers
     field:
-      display: First row as header
+      display: 'First row as header'
       type: toggle
       icon: toggle
       listable: hidden
@@ -16,7 +16,7 @@ fields:
   -
     handle: first_column_headers
     field:
-      display: First column as header
+      display: 'First column as header'
       type: toggle
       icon: toggle
       listable: hidden

@@ -1,4 +1,4 @@
-title: Button
+title: ': Peak – Button'
 fields:
   -
     handle: label
@@ -138,9 +138,9 @@ fields:
     handle: asset
     field: common.image
     config:
+      container: files
       localizable: true
       display: Asset
-      container: files
       width: 50
       validate:
         - 'required_if:{this}.link_type,asset'
