@@ -40,7 +40,7 @@
 
         padding: var(--spacing-l-1);
         text-align: center;
-        &:last-child {
+        &:last-of-type {
             padding-block-end: 0;
         }
         /* --mq-max-width-reading-before */
