@@ -13,6 +13,7 @@ use function Laravel\Prompts\confirm;
 use function Laravel\Prompts\error;
 use function Laravel\Prompts\info;
 use function Laravel\Prompts\search;
+use function Laravel\Prompts\select;
 use function Laravel\Prompts\spin;
 use function Laravel\Prompts\suggest;
 use function Laravel\Prompts\text;
@@ -76,11 +77,13 @@ class StarterKitPostInstall
         }
 
         $this->setAppName();
+        $this->setLicenseKey();
         $this->setAppUrl();
         $this->setAppKey();
 
         $this->useDebugbar();
         $this->useImagick();
+        $this->setLocalMailer();
 
         info("[✓] `.env` file overwritten.");
     }
@@ -241,8 +244,8 @@ class StarterKitPostInstall
     protected function finish(): void
     {
         info('[✓] Peak is installed. Enjoy the view!');
-        warning('Run `php please peak:install-preset` to install premade sets onto your website.');
-        warning('Run `php please peak:install-block` to install premade blocks onto your page builder.');
+        info("Run `php please peak:install-preset` to install premade sets onto your website.\nRun `php please peak:install-block` to install premade blocks onto your page builder.");
+        warning("You need a valid license to use these commands.\nBuy one here: https://statamic.com/addons/studio1902/peak-commands");
     }
 
     protected function setAppName(): void
@@ -258,6 +261,18 @@ class StarterKitPostInstall
 
         $this->replaceInEnv('APP_NAME="Statamic Peak"', "APP_NAME=\"{$appName}\"");
         $this->replaceInReadme('APP_NAME="Statamic Peak"', "APP_NAME=\"{$appName}\"");
+    }
+
+    protected function setLicenseKey(): void
+    {
+        $licenseKey = text(
+            label: 'Enter your Statamic License key',
+            hint: 'Leave empty to skip',
+            default: $this->interactive ? '' : 'Statamic Peak',
+            required: false,
+        );
+
+        $this->replaceInEnv('STATAMIC_LICENSE_KEY=', "STATAMIC_LICENSE_KEY=\"{$licenseKey}\"");
     }
 
     protected function setAppUrl(): void
@@ -292,6 +307,42 @@ class StarterKitPostInstall
 
         $this->replaceInEnv('#IMAGE_MANIPULATION_DRIVER=imagick', 'IMAGE_MANIPULATION_DRIVER=imagick');
         $this->replaceInReadme('#IMAGE_MANIPULATION_DRIVER=imagick', 'IMAGE_MANIPULATION_DRIVER=imagick');
+    }
+
+    protected function setLocalMailer(): void
+    {
+        $localMailer = select(
+            label: 'Which local mailer do you use?',
+            options: [
+                'helo' => 'Helo',
+                'herd' => 'Herd Pro',
+                'log' => 'Log',
+                'mailpit' => 'Mailpit',
+                'mailtrap' => 'Mailtrap',
+            ],
+            default: 'mailpit',
+            scroll: 10
+        );
+
+        if ($localMailer === 'mailpit') {
+            return;
+        }
+
+        if ($localMailer === 'helo' || $localMailer === 'herd') {
+            $this->replaceInEnv('MAIL_HOST=localhost', "MAIL_HOST=127.0.0.1");
+            $this->replaceInEnv('MAIL_PORT=1025', "MAIL_PORT=2525");
+            $this->replaceInEnv('MAIL_USERNAME=null', 'MAIL_USERNAME="${APP_NAME}"');
+        }
+
+        if ($localMailer === 'mailhog') {
+            $this->replaceInEnv('MAIL_HOST=localhost', "MAIL_HOST=127.0.0.1");
+            $this->replaceInEnv('MAIL_PORT=1025', "MAIL_PORT=8025");
+        }
+
+        if ($localMailer === 'log') {
+            $this->replaceInEnv('MAIL_MAILER=smtp', "MAIL_MAILER=log");
+            echo "log";
+        }
     }
 
     protected function initializeGitRepo(): void

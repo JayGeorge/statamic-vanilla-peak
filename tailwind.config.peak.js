@@ -107,27 +107,40 @@ module.exports = {
       }),
       // Stack utilities.
       matchUtilities(
-        {
-          stack: (value) => ({
-            '> *': {
-              '--stack-space': value,
-            },
-            '> *:not(.no-space-y, .no-space-b) + *:not(.no-space-y, .no-space-t)': {
-              marginBlockStart: 'var(--stack-space, 4rem)'
-            },
-          }),
-        },
-        { values: theme('spacing') }
-      ),
-      // Stack gap utilities.
-      matchUtilities(
-        {
-          'stack-space': (value) => ({
+      {
+        'stack': (value) => ({
+          '> *': {
             '--stack-space': value,
-          }),
+          },
+          '> *:not(.no-space-y, .no-space-b) + *:not(.no-space-y, .no-space-t)': {
+            'margin-block-start': `var(--stack-item-space, var(--stack-space, ${theme('spacing.16')}))`
+          },
+        }),
+        'stack-space': (value) => ({
+          '--stack-item-space': value,
+          '&:is([class*="stack-"][class*="stack-space-"] > *)': {
+            '--stack-item-space': value,
+          },
+        }),
         },
         { values: theme('spacing') }
       ),
+      addUtilities({
+        '[class*="stack-"][class*="stack-space-"]': {
+          '& > *': {
+            '--stack-item-space': 'initial',
+          },
+        },
+        '.stack-space-inherit': {
+          '--stack-item-space': 'initial',
+          '&:is([class*="stack-"][class*="stack-space-"] > *)': {
+            '--stack-item-space': 'initial',
+          },
+        },
+        '*:is(.stack-space-collapse) + *:is(.stack-space-collapse)': {
+          '--stack-item-space': 0,
+        },
+      }),
       // Render screen names in the breakpoint display.
       addBase(Object.entries(theme('screens'))
         .filter(value => typeof value[1] == 'string')

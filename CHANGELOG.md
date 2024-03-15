@@ -1,5 +1,78 @@
 # Changelog
 
+## v18.3.0 (2024-03-12)
+
+### What's new
+- Add an option to configure various local mailers in the post install script. c4f81fb8 by @robdekort
+
+## v18.2.2 (2024-03-12)
+
+### What's improved
+- Add `Reject all` to string files to for the new `Reject all` button in the consent banner. eabe148b by @robdekort
+
+## v18.2.1 (2024-03-12)
+
+### What's improved
+- Update Dutch translations. 23a5be8e by @robdekort
+
+## v18.2.0 (2024-03-12)
+
+### What's new
+- A `tracker_event` in the button fieldset to fire custom events using GTAG, GTM or Fathom. An update and an update script in the Tools addon will automatically add this to existing sites. 3351ac62 by @robdekort
+
+## v18.1.0 (2024-03-09)
+
+### What's new
+- Option to pass in `aspect_ratio` and `explainer` to consent gate. 7184a402 by @robdekort
+
+### What's changed
+- Removed `SAVE_CACHED_IMAGES` environmental variable. 9982f2aa by @robdekort
+
+## v18.0.1 (2024-03-05)
+
+### What's improved
+- Remove unused CSS line regarding focus. b97f2bfe by @robdekort
+- Use focus instead of focus visible in consent gate. d1954a1d by @robdekort
+
+## v18.0.0 (2024-03-01)
+
+### What's new
+- Use focus outlines instead of rings and set a default #384 by @robdekort and @klickreflex
+- Use extendable reusable consent gate partial #386 by @robdekort
+
+### What's improved
+- Danish translations. #385 by @martinduefrandsen
+
+## v17.9.1 (2024-02-20)
+
+### What's improved
+- Add license information to the starter kit post install information. 9b61ad8b by @robdekort
+
+## v17.9.0 (2024-02-19)
+
+### What's new
+- A prompt to enter your Statamic license key during install. 29203d22 by @robdekort
+
+## v17.8.0 (2024-02-18)
+
+### What's new
+- Use paid Statamic Peak Commands addon going forward.
+
+## v17.7.0 (2024-02-14)
+
+### What's improved
+- The `stack-space-*` utilities can now override parent stack space without having to explicitly specify breakpoints. fb815578 by @aerni
+
+## v17.6.0 (2024-02-13)
+
+### What's new
+- Add `stack-collapse` utility to collapse space between stack items with this class. 28f96ffb by @robdekort
+
+## v17.5.1 (2024-02-09)
+
+### What's improved
+- Add x-model attribute to honeypot field. 603fde18 by @robdekort
+
 ## v17.5.0 (2024-02-03)
 
 ### What's improved
