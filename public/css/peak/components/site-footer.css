@@ -3,20 +3,20 @@
 @layer components {
     .c-site-footer {
         width: 100%;
-        padding-block: var(--spacing-s-1) var(--spacing-l);
+        padding-block: var(--spacing-s-3) var(--spacing-m);
         max-width: var(--max-width-1);
         margin-inline: auto;
     }
     .c-site-footer__inner {
         display: flex;
-        padding-inline: var(--spacing-l);
+        padding-inline: var(--spacing-m);
         flex-direction: column;
-        gap: var(--spacing-s);
+        gap: var(--spacing-s-4);
     }
     .c-site-footer__1 {
         display: flex;
         flex-direction: column;
-        gap: var(--spacing-s);
+        gap: var(--spacing-s-4);
         font-size: var(--font-size-s-3);
         line-height: var(--font-size-s-3-line-height);
         font-weight: var(--font-family-main-weight-strong);
@@ -25,7 +25,7 @@
         display: flex;
 
         a {
-            padding-block: var(--spacing-s-xx);
+            padding-block: var(--spacing-s-6);
         }
     }
     /* --mq-footer-breakpoint-desktop */
@@ -36,7 +36,7 @@
         }
         .c-site-footer__1 {
             flex-direction: row;
-            gap: var(--spacing-m);
+            gap: var(--spacing-s-1);
         }
     }
 }

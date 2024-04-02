@@ -82,7 +82,7 @@
         margin-inline: 0;
         & img {
             /* Push the caption away from the image */
-            margin-block-end: var(--spacing-s);
+            margin-block-end: var(--spacing-s-4);
         }
     }
     ul {
@@ -90,21 +90,21 @@
     }
     /* Don't affect nav */
     main li:not(:last-child) {
-        padding-block-end: var(--spacing-s-1);
+        padding-block-end: var(--spacing-s-3);
     }
     dl,
     dt,dd,
     th,
     td {
-        padding-block-end: var(--spacing-s);
+        padding-block-end: var(--spacing-s-4);
     }
     p {
-        margin-block-end: var(--spacing-m);
+        margin-block-end: var(--spacing-s-1);
         &:last-child {
             margin-block-end: 0;
         }
         &:has(+ blockquote) {
-            margin-block-end: var(--spacing-l);
+            margin-block-end: var(--spacing-m);
         }
     }
     a {
@@ -133,7 +133,7 @@
         padding-inline-start: var(--spacing-l-1);
     }
     p + ul {
-        padding-block-start: var(--spacing-s);
+        padding-block-start: var(--spacing-s-4);
     }
     strong {
         font-weight: var(--font-family-main-weight-strong);
@@ -146,7 +146,7 @@
     }
     :is(h1, h2, h3, h4, h5, h6, p) svg {
         vertical-align: baseline;
-        margin-inline-end: var(--spacing-s-x);
+        margin-inline-end: var(--spacing-s-5);
     }
     /* GROUP ELEMENTS / FRAMEWORK / MAIN
     =================================================== */
@@ -209,24 +209,24 @@
     /* GROUP ELEMENTS / FRAMEWORK / HEADINGS / HIGH PRIORITY / VERTICAL SPACING
     =================================================== */
     h1, .h1 {
-        padding-block-end: var(--spacing-l);
+        padding-block-end: var(--spacing-m);
     }
     h2, .h2 {
-        padding-block-end: var(--spacing-m);
+        padding-block-end: var(--spacing-s-1);
     }
     * + h2,
     * + .h2,
     article + article {
-        padding-block-start: var(--spacing-m);
+        padding-block-start: var(--spacing-s-1);
     }
     /* GROUP ELEMENTS / FRAMEWORK / HEADINGS / LOW PRIORITY / VERTICAL SPACING
     =================================================== */
     h3, .h3 {
-        padding-block-end: var(--spacing-s);
+        padding-block-end: var(--spacing-s-4);
     }
 }
 @layer components {
-    /* Put these at the component level e.g. so we make sure we override something like .c-site-footer li { padding-block-end: var(--spacing-s-x); } */
+    /* Put these at the component level e.g. so we make sure we override something like .c-site-footer li { padding-block-end: var(--spacing-s-5); } */
     /* Nested lists */
     ol ol,
     ol ol li:last-child,
@@ -257,7 +257,7 @@
         }
         & svg:last-child {
             /* subnav arrow */
-            margin-inline-start: var(--spacing-s-xx);
+            margin-inline-start: var(--spacing-s-6);
             width: 0.7rem;
             color: var(--color-primary-text);
 

@@ -27,7 +27,7 @@
 		max-width: var(--max-width-reading);
 		margin-inline: auto;
 
-		padding-inline: var(--spacing-l);
+		padding-inline: var(--spacing-m);
 		padding-block-end: var(--spacing-l-1);
 	}
 

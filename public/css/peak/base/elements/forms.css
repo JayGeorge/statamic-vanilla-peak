@@ -34,7 +34,7 @@
 
         margin-block-end: var(--field-block-end);
         &:has(~ .c-field-error)  {
-            margin-block-end: var(--spacing-s-x);
+            margin-block-end: var(--spacing-s-5);
             border-color: var(--color-alert-warning);
             border-width: 3px;
         }
@@ -56,7 +56,7 @@
         height: 1rem;
         /* =JFG. So they always line up */
         float: left;
-        margin-right: var(--spacing-s);
+        margin-right: var(--spacing-s-4);
         line-height: normal;
     }
     /* Checkbox and Radio labels */
@@ -71,7 +71,7 @@
 
     [type="submit"] {
         /* e.g. >> /blog/readability-test/ */
-        margin-top: var(--spacing-s);
+        margin-top: var(--spacing-s-4);
     }
 
     [type="file"] {
@@ -84,7 +84,7 @@
         padding: 0;
         margin: 0;
         border: 0;
-        padding-block-end: var(--spacing-l);
+        padding-block-end: var(--spacing-m);
     }
 
     select {
@@ -94,7 +94,7 @@
 
     label {
         display: block;
-        padding-block-end: var(--spacing-s);
+        padding-block-end: var(--spacing-s-4);
         /* Override line-height set on body */
         line-height: 1.4;
         &:not(:has([type="checkbox"])) {
@@ -118,9 +118,9 @@
     .c-form-banner {
         display: flex;
         align-items: center;
-        gap: var(--spacing-s-1);
-        padding: var(--spacing-m);
-        margin-block-end: var(--spacing-l);
+        gap: var(--spacing-s-3);
+        padding: var(--spacing-s-1);
+        margin-block-end: var(--spacing-m);
         border-radius: var(--border-radius-m);
         * {
             text-wrap: pretty;
@@ -134,8 +134,8 @@
         }
     }
     .c-form-errors {
-        padding: var(--spacing-m);
-        margin-block-end: var(--spacing-l);
+        padding: var(--spacing-s-1);
+        margin-block-end: var(--spacing-m);
         background: var(--color-alert-warning-background);
         color: var(--color-alert-warning);
         border: 1px solid var(--color-alert-warning);

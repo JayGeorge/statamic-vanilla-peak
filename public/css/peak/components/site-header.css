@@ -3,7 +3,7 @@
 .c-site-header {
     max-width: var(--max-width-1);
     margin-inline: auto;
-    padding: var(--spacing-m) var(--spacing-l);
+    padding: var(--spacing-s-1) var(--spacing-m);
     width: 100%;
 
     .o-current-menu-item {
@@ -16,8 +16,8 @@
     align-items: center;
 }
 .c-site-logo {
-    padding: var(--spacing-s-x);
-    margin: calc(0% - var(--spacing-s-x));
+    padding: var(--spacing-s-5);
+    margin: calc(0% - var(--spacing-s-5));
     transition: var(--transition-transform);
 
     img {
@@ -42,13 +42,13 @@
 .c-site-header__nav-desktop {
     ul {
         padding: 0;
-        margin-inline-start: var(--spacing-l);
+        margin-inline-start: var(--spacing-m);
         list-style: none;
 
         &:first-child {
             display: flex;
             align-items: center;
-            gap: var(--spacing-l-static);
+            gap: var(--spacing-m-static);
         }
 
         a {
@@ -59,17 +59,17 @@
             position: absolute;
             z-index: var(--z-index-nav);
             right: 0;
-            padding: var(--spacing-s-x) var(--spacing-s);
-            margin-block-start: var(--spacing-s-x);
-            margin-inline-start: calc(0% - var(--spacing-s));
+            padding: var(--spacing-s-5) var(--spacing-s-4);
+            margin-block-start: var(--spacing-s-5);
+            margin-inline-start: calc(0% - var(--spacing-s-4));
             background: white;
             border-radius: 0.25rem;
             border: var(--border-neutral);
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 
             & a {
-                padding: var(--spacing-s) var(--spacing-s-x);
-                margin-inline: calc(0% - var(--spacing-s-xx));
+                padding: var(--spacing-s-4) var(--spacing-s-5);
+                margin-inline: calc(0% - var(--spacing-s-6));
                 font-size: var(--font-size-s-3); line-height: var(--font-size-s-3-line-height);
             }
         }
@@ -80,9 +80,9 @@
     }
     a {
         display: flex;
-        gap: var(--spacing-s-xx);
+        gap: var(--spacing-s-6);
         align-items: center;
-        padding: var(--spacing-s-xx);
+        padding: var(--spacing-s-6);
         font-size: var(--font-size-s-3); line-height: var(--font-size-s-3-line-height);
         font-weight: var(--font-family-main-weight-strong);
 
@@ -96,8 +96,8 @@
         position: fixed;
         z-index: var(--z-index-above-nav);
         display: flex;
-        right: var(--spacing-m);
-        top: var(--spacing-m);
+        right: var(--spacing-s-1);
+        top: var(--spacing-s-1);
         width: 4rem;
         height: 4rem;
         justify-content: center;
@@ -109,7 +109,7 @@
         border-radius: 0.25rem;
     }
     ul:first-child {
-        padding: var(--spacing-s-1) 0 var(--spacing-s-x);
+        padding: var(--spacing-s-3) 0 var(--spacing-s-5);
     }
     ul {
         display: flex;
@@ -124,8 +124,8 @@
     }
     a {
         display: flex;
-        padding-block: var(--spacing-s-x);
-        margin-inline-start: var(--spacing-s-xx);
+        padding-block: var(--spacing-s-5);
+        margin-inline-start: var(--spacing-s-6);
         align-items: center;
         width: 100%;
         font-size: var(--font-size-s-1); line-height: var(--font-size-s-1-line-height);
@@ -138,6 +138,6 @@
     inset: 0;
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-l) var(--spacing-l) var(--spacing-l-1);
+    padding: var(--spacing-m) var(--spacing-m) var(--spacing-l-1);
     background: white;
 }

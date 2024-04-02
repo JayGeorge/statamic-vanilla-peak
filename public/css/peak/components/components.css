@@ -56,7 +56,7 @@
     /* e.g used after a table */
     :has(+ .c-caption) {
         padding-block-end: 0;
-        margin-block-end: var(--spacing-s);
+        margin-block-end: var(--spacing-s-4);
     }
     .c-caption {
         font-size: var(--font-size-s-3);

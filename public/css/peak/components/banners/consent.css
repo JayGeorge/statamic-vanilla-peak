@@ -13,7 +13,7 @@
 */
 @layer components {
     .c-cookie-consent {
-        --border-buffer: var(--spacing-s-1);
+        --border-buffer: var(--spacing-s-3);
 
         position: fixed;
         bottom: 0;
@@ -21,7 +21,7 @@
         margin: 0 var(--border-buffer) var(--border-buffer);
         margin-inline: var(--border-buffer);
         z-index: var(--z-index-nav);
-        padding: var(--spacing-m);
+        padding: var(--spacing-s-1);
         border-radius: var(--border-radius-m);
 
         border: var(--border-neutral);
@@ -29,7 +29,7 @@
         box-shadow: var(--box-shadow-not-t);
 
         h2 {
-            padding-block-end: var(--spacing-s-1); /* Decrease */
+            padding-block-end: var(--spacing-s-3); /* Decrease */
             font-size: var(--font-size-s-1);
         }
 
@@ -41,7 +41,7 @@
         label {
             display: grid;
             grid-template-columns: 1rem 1fr;
-            gap: var(--spacing-s);
+            gap: var(--spacing-s-4);
             align-items: start;
 
             [type="checkbox"] {
@@ -59,17 +59,17 @@
         }
 
         .o-hero-buttons {
-            gap: var(--spacing-s); /* Decrease */
+            gap: var(--spacing-s-4); /* Decrease */
             padding-inline: 0;
-            padding-block-start: var(--spacing-s-1);
+            padding-block-start: var(--spacing-s-3);
         }
 
         @media (min-width: 768px) {
             width: 23rem;
-            padding: var(--spacing-l);
+            padding: var(--spacing-m);
         }
         @media (min-width: 1024px) {
-            --border-buffer: var(--spacing-l);
+            --border-buffer: var(--spacing-m);
         }
     }
 }
@@ -117,7 +117,7 @@
         justify-content: center;
         align-items: center;
 
-        padding: var(--spacing-l);
+        padding: var(--spacing-m);
         background: var(--color-gray-background);
     }
 }

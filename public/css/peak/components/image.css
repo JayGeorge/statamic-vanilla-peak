@@ -26,7 +26,7 @@
     .c-image {
         max-width: var(--max-width-title-l);
         margin-inline: auto;
-        padding: 0 var(--spacing-l) var(--spacing-l-1);
+        padding: 0 var(--spacing-m) var(--spacing-l-1);
     }
 }
 @layer modifiers {
