@@ -2,10 +2,10 @@
     .c-cards {
         margin-inline: auto;
         display: grid;
-        gap: var(--spacing-s-1);
+        gap: var(--spacing-m);
         max-width: var(--max-width-reading);
 
-        padding-inline: var(--spacing-m);
+        padding-inline: var(--spacing-l);
 
         &, & * {
             color: var(--color-primary-text);
@@ -25,7 +25,7 @@
             max-width: var(--max-width-1);
             grid-template-columns: repeat(3, 1fr);
             > :is(h2, h3, h4) {
-                padding-block-end: var(--spacing-s-4); /* Increase */
+                padding-block-end: var(--spacing-s); /* Increase */
             }
         }
     }
@@ -36,7 +36,7 @@
         /* justify-content: space-between; */
         align-items: start;
 
-        padding: var(--spacing-m);
+        padding: var(--spacing-l);
 
         border-radius: var(--border-radius-m);
         box-shadow: var(--box-shadow-not-t);

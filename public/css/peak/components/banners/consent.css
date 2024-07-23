@@ -1,4 +1,4 @@
-/* GROUP ELEMENTS / COOKIE CONSENT POPUP
+/* GROUP COMPONENTS / CONSENT POPUP
 =================================================== */
 /* Notes...
 
@@ -12,8 +12,8 @@
 
 */
 @layer components {
-    .c-cookie-consent {
-        --border-buffer: var(--spacing-s-3);
+    .c-consent-popup {
+        --border-buffer: var(--spacing-s-1);
 
         position: fixed;
         bottom: 0;
@@ -21,7 +21,7 @@
         margin: 0 var(--border-buffer) var(--border-buffer);
         margin-inline: var(--border-buffer);
         z-index: var(--z-index-nav);
-        padding: var(--spacing-s-1);
+        padding: var(--spacing-m);
         border-radius: var(--border-radius-m);
 
         border: var(--border-neutral);
@@ -29,7 +29,7 @@
         box-shadow: var(--box-shadow-not-t);
 
         h2 {
-            padding-block-end: var(--spacing-s-3); /* Decrease */
+            padding-block-end: var(--spacing-s-1); /* Decrease */
             font-size: var(--font-size-s-1);
         }
 
@@ -41,7 +41,7 @@
         label {
             display: grid;
             grid-template-columns: 1rem 1fr;
-            gap: var(--spacing-s-4);
+            gap: var(--spacing-s);
             align-items: start;
 
             [type="checkbox"] {
@@ -59,22 +59,25 @@
         }
 
         .o-hero-buttons {
-            gap: var(--spacing-s-4); /* Decrease */
+            gap: var(--spacing-s); /* Decrease */
             padding-inline: 0;
-            padding-block-start: var(--spacing-s-3);
+            padding-block-start: var(--spacing-s-1);
+            button {
+                margin: 0;
+            }
         }
 
         @media (min-width: 768px) {
-            width: 23rem;
-            padding: var(--spacing-m);
+            width: 30rem;
+            padding: var(--spacing-l);
         }
         @media (min-width: 1024px) {
-            --border-buffer: var(--spacing-m);
+            --border-buffer: var(--spacing-l);
         }
     }
 }
 @layer modifiers {
-    .c-cookie-consent--r {
+    .c-consent-popup--r {
         right: 0;
     }
 }
@@ -117,7 +120,7 @@
         justify-content: center;
         align-items: center;
 
-        padding: var(--spacing-m);
+        padding: var(--spacing-l);
         background: var(--color-gray-background);
     }
 }

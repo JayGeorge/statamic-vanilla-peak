@@ -1,21 +1,21 @@
 :root {
     /* GROUP VARIABLES -- SPACING
     =================================================== */
-    --spacing-s-6: 0.25rem;
-    --spacing-s-5: 0.5rem;
-    --spacing-s-4: 0.8rem;
-    --spacing-s-3: 1rem;
+    --spacing-s-xx: 0.25rem;
+    --spacing-s-x: 0.5rem;
+    --spacing-s: 0.8rem;
+    --spacing-s-1: 1rem;
     --spacing-s-2: 1.35rem;
 
-    --spacing-s-1: 1.5rem;
-    --spacing-m: 1.8rem;
-    --spacing-m-static: 1.8rem;
+    --spacing-m: 1.5rem;
+    --spacing-l: 1.8rem;
+    --spacing-l-static: 1.8rem;
     --spacing-l-1: 2.5rem;
 
     /* Smaller values for mobile */
     --spacing-l-2: min(14vw, 4.2rem);
     --spacing-l-3: min(18vw, 4.7rem);
-    --spacing-l-3-horizontal: var(--spacing-s-4); /* Increased later */
+    --spacing-l-3-horizontal: var(--spacing-s); /* Increased later */
     --spacing-l-4: min(18vw, 7.5rem);
 
     --spacing-vh-s: min(12vw, 10vh);
@@ -35,6 +35,7 @@
     /* From lowest to highest value */
     --max-width-1: 75rem;
     --max-width-reading: 39rem;
+    --max-width-reading-short-ch: 28ch;
     /* Increased at later MQs */
     --max-width-title: 50rem;
     --max-width-title-l: 60rem;
@@ -146,7 +147,7 @@
     @media (min-width: 450px) {
         /* GROUP VARIABLES -- SPACING
         ===================================================  */
-        --spacing-m: 2.3rem;
+        --spacing-l: 2.3rem;
         --spacing-l-1: 3.5rem;
     }
     /* --mq-root-variable-adjustments-2 */

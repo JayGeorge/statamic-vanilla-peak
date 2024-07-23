@@ -25,7 +25,7 @@ scope;
 @import 'peak/base/elements/form-grid.css';
 @import 'peak/base/elements/tables.css';
 @import 'peak/components/components.css';
-@import 'peak/components/site-header.css';
+/* @import 'peak/components/site-header.css'; */
 @import 'peak/components/site-footer.css';
 @import 'peak/components/buttons.css';
 @import 'peak/components/hero-buttons.css';
@@ -43,8 +43,8 @@ scope;
 /* @import 'base/elements/elements.css'; */
 /* @import 'base/elements/forms.css'; */
 /* @import 'base/elements/tables.css'; */
-/* @import 'objects/objects.css'; */
-/* @import 'components/components.css'; */
+/* @import 'objects/some-object.css'; */
+@import 'components/site-header.css';
 /* @import 'scope/entry-content.css'; */
 /* @import 'utilities/utilities.css'; */
 /* @import 'utilities/animation-keyframes.css'; */

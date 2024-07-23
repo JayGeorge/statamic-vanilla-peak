@@ -36,17 +36,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: var(--spacing-s-1);
+        gap: var(--spacing-m);
 
         padding: var(--spacing-l-1);
         text-align: center;
-        &:last-of-type {
-            padding-block-end: 0;
-        }
         /* --mq-max-width-reading-before */
         @media (max-width: 599px) {
             text-align: left;
-            padding-inline-start: var(--spacing-m);
+            padding-inline-start: var(--spacing-l);
         }
     }
 }

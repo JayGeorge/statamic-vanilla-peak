@@ -30,10 +30,10 @@
         max-width: var(--max-width-title);
         margin-inline: auto;
 
-        padding-inline: var(--spacing-m);
+        padding-inline: var(--spacing-l);
 
         blockquote {
-            padding-block-end: var(--spacing-s-1);
+            padding-block-end: var(--spacing-m);
             font-size: var(--font-size-m); line-height: var(--font-size-m-line-height);
             font-weight: var(--font-family-heading-weight-light);
 
