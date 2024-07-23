@@ -51,5 +51,5 @@ export_paths:
 dependencies:
   studio1902/statamic-peak-browser-appearance: ^3.4
   studio1902/statamic-peak-commands: ^8.0
-  studio1902/statamic-peak-seo: ^8.0
-  studio1902/statamic-peak-tools: ^6.0
+  jaygeorge/statamic-vanilla-peak-seo: ^8.0
+  jaygeorge/statamic-vanilla-peak-tools: ^5.0
