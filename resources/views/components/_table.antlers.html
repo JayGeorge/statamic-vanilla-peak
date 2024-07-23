@@ -4,25 +4,25 @@
     @set page.article.table
 #}}
 
-{{# /components/_table.antlers.html #}}
+<!-- /components/_table.antlers.html -->
 <div
     class="
-        c-table-wrapper
+        overflow-auto not-prose my-8
         {{ switch(
-            (size == 'md') => '',
-            (size == 'lg') => 'c-table-wrapper--l',
-            (size == 'xl') => 'c-table-wrapper--l-1',
-            () => ''
+            (size == 'md') => 'span-md',
+            (size == 'lg') => 'span-lg',
+            (size == 'xl') => 'span-xl',
+            () => 'span-md'
         )}}
     "
 >
-    <table>
+    <table class="w-full bg-light border-collapse min-w-[580px] sm:min-w-none">
         {{ table }}
             {{ if first && first_row_headers }}
                 <thead>
                     <tr>
                         {{ cells }}
-                            <th>{{ value }}</th>
+                            <th class="px-3 py-3 text-xs font-bold tracking-wider text-left text-white uppercase border-b xl:px-6 border-neutral bg-neutral">{{ value }}</th>
                         {{ /cells }}
                     </tr>
                 </thead>
@@ -34,9 +34,9 @@
                 <tr>
                     {{ cells }}
                         {{ if first && first_column_headers }}
-                            <th>{{ value }}</th>
+                            <th class="px-3 py-3 text-xs font-bold tracking-wider text-left text-white uppercase border-b xl:px-6 border-neutral bg-neutral">{{ value }}</th>
                         {{ else }}
-                            <td>{{ value }}</td>
+                            <td class="px-3 py-3 text-sm border-b xl:px-6 border-neutral text-neutral align-top ">{{ value }}</td>
                         {{ /if }}
                     {{ /cells }}
                 </tr>
@@ -48,4 +48,4 @@
 
     {{ partial:typography/caption }}
 </div>
-{{# End: /components/_table.antlers.html #}}
+<!-- End: /components/_table.antlers.html -->

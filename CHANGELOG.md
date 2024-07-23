@@ -1,5 +1,107 @@
 # Changelog
 
+## v19.5.0 (2024-07-11)
+
+### What's new
+- Reorder asset containers in `preferences.yaml`. 2f10b533 by @robdekort
+
+## v19.4.1 (2024-07-04)
+
+### What's improved
+- Merge Statamic changes into `cp.php`. 7a01163f by @robdekort
+- Remove unused `order` property from asset containers. c94e0e66 by @robdekort
+
+## v19.4.0 (2024-06-26)
+
+### What's new
+- Prevent non super users from editing super users. 5e56b252 by @jasonvarga
+
+## v19.3.5 (2024-06-25)
+
+### What's changed
+- Stache watcher defaults to auto. b0857de9 by @robdekort
+- Remove redundant config files. 699c82c9 by @robdekort
+
+### What's fixed
+- Tpyo in the post install hook. 7dfce349 by @robdekort
+
+## v19.3.4 (2024-06-20)
+
+### What's changed
+- Remove `users.php` from the starter kit. c4f827a3 by @robdekort
+
+## v19.3.3 (2024-06-17)
+
+### What's improved
+- Improve Forge deploy script. 4dd93599 by @DanielDarrenJones
+- Post install improvements. e055d73a 1e29020f by @robdekort
+- Update dependencies. 66fee7ae by @robdekort
+
+## v19.3.2 (2024-06-05)
+
+### What's fixed
+- Fix precognition validation for toggle field. b5e2c056 by @robdekort
+
+### What's changed
+- Updated dependencies and recompile assets. 8477a937 by @robdekort
+
+## v19.3.1 (2024-05-29)
+
+### What's improved
+- Add labels to replicator add set buttons. 6b316ba7 by @robdekort
+
+## v19.3.0 (2024-05-28)
+
+### What's new
+- Prepare for orderable asset containers. b3210a64 by @robdekort
+
+### What's improved
+- More robust form field instruction positioning. #390 by @prikkprikkprikk
+
+## v19.2.0 (2024-05-28)
+
+### What's new
+- Use autocomplete values on relevant form fields. 3ec1c58f by @robdekort
+
+## v19.1.1 (2024-05-24)
+
+### What's fixed
+- Set explicit form button type. 7b00972e by @robdekort
+
+## v19.1.0 (2024-05-22)
+
+### What's new
+- Add dark mode logo option to .env and readme. aa6c400a by @robdekort
+
+## v19.0.0 (2024-05-09)
+
+### What's new
+- Statamic v5 and Laravel 11 support including: updated config files, prefix SVG tag attributes, updated post install script to support Statamic v5, a new composer auto update workflow option in the post install script, an external link icon for buttons, a more readable button partial and an improve Ploi deploy script. #389 by @robdekort
+
+## v18.7.0 (2024-04-19)
+
+### What's improved
+- Install `spatie/image` when installing `Browsershot` in the post install script. 4d44b600 by @robdekort
+
+## v18.6.0 (2024-04-04)
+
+### What's improved
+- Auto open the mobile sub navigation when the current page is a child. d40d401d by @robdekort
+
+## v18.5.0 (2024-04-03)
+
+### What's improved
+- Use aria-current="page" on navs. 5bb50ac5 by @robdekort
+- More resillient buttons on small screens and improved outline color. 89949a69 by @robdekort
+- Vertical align table cells to the top. 6ba2b218 by @robdekort
+- Change wording for consent reset link. 56f11c00 by @robdekort
+
+## v18.4.0 (2024-03-21)
+
+### What's new
+- Updated Dutch translations. 80c45e9e by @robdekort
+- Recompiled assets for new Consent Banner options. a54622a8 by @robdekort
+
 ## v18.3.0 (2024-03-12)
 
 ### What's new

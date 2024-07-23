@@ -9,6 +9,7 @@ fields:
       collapse: true
       listable: false
       display: 'Page builder'
+      button_label: 'Add block'
       sets:
         interactive:
           display: Interactive
@@ -41,6 +42,3 @@ fields:
               fields:
                 -
                   import: article
-      instructions_position: above
-      visibility: visible
-      previews: true
